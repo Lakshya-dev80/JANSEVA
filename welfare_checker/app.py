@@ -255,74 +255,91 @@ def _generate_pdf(
     """Generate a PDF summary of eligibility results."""
     from fpdf import FPDF
 
-    pdf = FPDF()
-    pdf.set_margins(15, 15, 15)
-    pdf.set_auto_page_break(auto=True, margin=15)
+    pdf = FPDF(format="A4")
+    pdf.set_margins(20, 20, 20)
+    pdf.set_auto_page_break(auto=True, margin=20)
     pdf.add_page()
+    # usable width = 210 - 20 - 20 = 170mm
+    W = 170
+
+    def row(text: str, h: int = 6) -> None:
+        """Write a safe text row, truncating if needed."""
+        safe = str(text).encode("latin-1", errors="replace").decode("latin-1")
+        pdf.cell(W, h, safe, ln=True)
+
+    def section(title: str, r: int, g: int, b: int) -> None:
+        pdf.set_font("Helvetica", "B", 12)
+        pdf.set_text_color(r, g, b)
+        pdf.cell(W, 8, title, ln=True)
+        pdf.set_text_color(0, 0, 0)
+        pdf.ln(1)
 
     # Title
-    pdf.set_font("Helvetica", "B", 18)
-    pdf.cell(0, 12, "JanSeva Welfare Eligibility Report", ln=True, align="C")
-    pdf.set_font("Helvetica", "", 11)
-    pdf.cell(0, 8, f"Citizen: {citizen_name}", ln=True, align="C")
-    pdf.ln(4)
+    pdf.set_font("Helvetica", "B", 16)
+    pdf.set_text_color(0, 0, 0)
+    row("JanSeva Welfare Eligibility Report", 10)
+    pdf.set_font("Helvetica", "", 10)
+    row(f"Citizen: {citizen_name}", 7)
+    pdf.ln(3)
     pdf.set_draw_color(180, 180, 180)
-    pdf.line(10, pdf.get_y(), 200, pdf.get_y())
-    pdf.ln(6)
+    pdf.line(20, pdf.get_y(), 190, pdf.get_y())
+    pdf.ln(4)
 
     # Summary
-    pdf.set_font("Helvetica", "B", 12)
-    pdf.cell(0, 8, f"Summary: {len(eligible)} Eligible  |  {len(ineligible)} Not Eligible", ln=True)
-    pdf.ln(4)
+    pdf.set_font("Helvetica", "B", 11)
+    row(f"Summary:  {len(eligible)} Eligible    {len(ineligible)} Not Eligible", 8)
+    pdf.ln(3)
 
     # Eligible schemes
     if eligible:
-        pdf.set_font("Helvetica", "B", 13)
-        pdf.set_text_color(0, 128, 0)
-        pdf.cell(0, 9, "ELIGIBLE SCHEMES", ln=True)
-        pdf.set_text_color(0, 0, 0)
-        pdf.ln(2)
+        section("ELIGIBLE SCHEMES", 0, 130, 0)
         for result in eligible:
             matching = next((s for s in schemes if s.name == result.scheme_name), None)
-            pdf.set_font("Helvetica", "B", 11)
-            pdf.multi_cell(0, 7, result.scheme_name)
+            pdf.set_font("Helvetica", "B", 10)
+            row(f"  {result.scheme_name[:80]}")
             if matching:
-                pdf.set_font("Helvetica", "I", 9)
+                pdf.set_font("Helvetica", "I", 8)
                 pdf.set_text_color(80, 80, 80)
-                pdf.multi_cell(0, 6, f"Category: {matching.category}")
+                row(f"  Category: {matching.category}")
                 pdf.set_text_color(0, 0, 0)
-                pdf.set_font("Helvetica", "", 9)
+                pdf.set_font("Helvetica", "", 8)
                 for reason in result.reasons:
-                    clean = reason.replace("\u2713", "OK").replace("\u2717", "X")
-                    pdf.multi_cell(0, 6, f"- {clean}")
-                guidance_clean = _re.sub(r'\s+', ' ', matching.guidance)
-                pdf.multi_cell(0, 6, f"How to Apply: {guidance_clean}")
-                pdf.set_font("Helvetica", "I", 9)
-                pdf.multi_cell(0, 6, f"Docs: {', '.join(matching.documents_required)}")
-            pdf.ln(3)
+                    clean = (reason
+                             .replace("\u2713", "OK")
+                             .replace("\u2717", "X")
+                             .replace("\u2714", "OK")
+                             .replace("\u274c", "X"))
+                    row(f"  - {clean[:100]}")
+                guidance = _re.sub(r'\s+', ' ', matching.guidance)[:200]
+                row(f"  Apply: {guidance}")
+                docs = ", ".join(matching.documents_required)[:150]
+                row(f"  Docs: {docs}")
+                if matching.portal_url:
+                    row(f"  Portal: {matching.portal_url}")
+            pdf.ln(2)
 
-    # Not eligible schemes
+    # Not eligible
     if ineligible:
         pdf.ln(2)
-        pdf.set_font("Helvetica", "B", 13)
-        pdf.set_text_color(180, 0, 0)
-        pdf.cell(0, 9, "NOT ELIGIBLE SCHEMES", ln=True)
-        pdf.set_text_color(0, 0, 0)
-        pdf.ln(2)
+        section("NOT ELIGIBLE SCHEMES", 180, 0, 0)
         for result in ineligible:
             pdf.set_font("Helvetica", "B", 10)
-            pdf.multi_cell(0, 7, result.scheme_name)
-            pdf.set_font("Helvetica", "", 9)
+            row(f"  {result.scheme_name[:80]}")
+            pdf.set_font("Helvetica", "", 8)
             for reason in result.reasons:
-                clean = reason.replace("\u2713", "OK").replace("\u2717", "X")
-                pdf.multi_cell(0, 6, f"- {clean}")
+                clean = (reason
+                         .replace("\u2713", "OK")
+                         .replace("\u2717", "X")
+                         .replace("\u2714", "OK")
+                         .replace("\u274c", "X"))
+                row(f"  - {clean[:100]}")
             pdf.ln(2)
 
     # Footer
     pdf.ln(4)
-    pdf.set_font("Helvetica", "I", 8)
-    pdf.set_text_color(120, 120, 120)
-    pdf.cell(0, 6, "Generated by JanSeva | Team CLAVIX | janseva.streamlit.app", ln=True, align="C")
+    pdf.set_font("Helvetica", "I", 7)
+    pdf.set_text_color(150, 150, 150)
+    row("Generated by JanSeva | Team CLAVIX", 6)
 
     return bytes(pdf.output())
 
