@@ -344,15 +344,16 @@ if "results" in st.session_state:
     m2.metric(f"✅ {L.get('eligible_count_label', 'eligible')}", len(eligible_results))
     m3.metric("❌ Not eligible", len(ineligible_results))
 
-    # PDF download button
-    pdf_bytes = _generate_pdf(citizen_name, eligible_results, ineligible_results, schemes)
-    st.download_button(
-        label="📄 Download PDF Summary",
-        data=pdf_bytes,
-        file_name=f"janseva_{citizen_name.replace(' ', '_')}_report.pdf",
-        mime="application/pdf",
-        use_container_width=True,
-    )
+    # PDF download button — generated only when clicked
+    if st.button("📄 Download PDF Summary", use_container_width=True):
+        pdf_bytes = _generate_pdf(citizen_name, eligible_results, ineligible_results, schemes)
+        st.download_button(
+            label="⬇️ Click here to download",
+            data=pdf_bytes,
+            file_name=f"janseva_{citizen_name.replace(' ', '_')}_report.pdf",
+            mime="application/pdf",
+            use_container_width=True,
+        )
 
     st.divider()
 
