@@ -256,6 +256,7 @@ def _generate_pdf(
     from fpdf import FPDF
 
     pdf = FPDF()
+    pdf.set_margins(15, 15, 15)
     pdf.set_auto_page_break(auto=True, margin=15)
     pdf.add_page()
 
@@ -284,22 +285,20 @@ def _generate_pdf(
         for result in eligible:
             matching = next((s for s in schemes if s.name == result.scheme_name), None)
             pdf.set_font("Helvetica", "B", 11)
-            pdf.multi_cell(0, 7, f"  {result.scheme_name}")
+            pdf.multi_cell(0, 7, result.scheme_name)
             if matching:
                 pdf.set_font("Helvetica", "I", 9)
                 pdf.set_text_color(80, 80, 80)
-                pdf.multi_cell(0, 6, f"  Category: {matching.category}")
+                pdf.multi_cell(0, 6, f"Category: {matching.category}")
                 pdf.set_text_color(0, 0, 0)
                 pdf.set_font("Helvetica", "", 9)
                 for reason in result.reasons:
                     clean = reason.replace("\u2713", "OK").replace("\u2717", "X")
-                    pdf.multi_cell(0, 6, f"    - {clean}")
-                pdf.set_font("Helvetica", "", 9)
-                # Strip URLs from guidance for PDF
-                guidance_clean = _re.sub(r'https?://[^\s]+', lambda m: m.group(0), matching.guidance)
-                pdf.multi_cell(0, 6, f"  How to Apply: {guidance_clean}")
+                    pdf.multi_cell(0, 6, f"- {clean}")
+                guidance_clean = _re.sub(r'\s+', ' ', matching.guidance)
+                pdf.multi_cell(0, 6, f"How to Apply: {guidance_clean}")
                 pdf.set_font("Helvetica", "I", 9)
-                pdf.multi_cell(0, 6, f"  Docs: {', '.join(matching.documents_required)}")
+                pdf.multi_cell(0, 6, f"Docs: {', '.join(matching.documents_required)}")
             pdf.ln(3)
 
     # Not eligible schemes
@@ -312,11 +311,11 @@ def _generate_pdf(
         pdf.ln(2)
         for result in ineligible:
             pdf.set_font("Helvetica", "B", 10)
-            pdf.multi_cell(0, 7, f"  {result.scheme_name}")
+            pdf.multi_cell(0, 7, result.scheme_name)
             pdf.set_font("Helvetica", "", 9)
             for reason in result.reasons:
                 clean = reason.replace("\u2713", "OK").replace("\u2717", "X")
-                pdf.multi_cell(0, 6, f"    - {clean}")
+                pdf.multi_cell(0, 6, f"- {clean}")
             pdf.ln(2)
 
     # Footer
