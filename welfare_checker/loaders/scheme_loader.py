@@ -81,6 +81,7 @@ def _parse_scheme(entry: dict, index: int) -> Scheme:
     return Scheme(
         scheme_id=entry["scheme_id"],
         name=entry["name"],
+        category=entry.get("category", "General"),
         description=entry["description"],
         applicable_states=entry["applicable_states"],
         guidance=entry["guidance"],

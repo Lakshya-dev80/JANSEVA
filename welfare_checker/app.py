@@ -65,6 +65,14 @@ LANGUAGE_OPTIONS: dict[str, str] = {
     "English": "en",
     "हिन्दी (Hindi)": "hi",
     "தமிழ் (Tamil)": "ta",
+    "বাংলা (Bengali)": "bn",
+    "తెలుగు (Telugu)": "te",
+    "मराठी (Marathi)": "mr",
+    "ગુજરાતી (Gujarati)": "gu",
+    "ಕನ್ನಡ (Kannada)": "kn",
+    "മലയാളം (Malayalam)": "ml",
+    "ਪੰਜਾਬੀ (Punjabi)": "pa",
+    "ଓଡ଼ିଆ (Odia)": "or",
 }
 
 translations = _load_translations_cached()
@@ -79,6 +87,15 @@ with st.sidebar:
     )
     lang_code: str = LANGUAGE_OPTIONS[selected_lang_name]
 
+    st.divider()
+
+    # -----------------------------------------------------------------------
+    # Stats badge in sidebar
+    # -----------------------------------------------------------------------
+    st.metric("📋 Total Schemes", len(schemes))
+    categories = sorted(set(s.category for s in schemes))
+    st.metric("🗂️ Categories", len(categories))
+
 # Retrieve the label dict for the current language (falls back to English)
 L: dict[str, str] = get_labels(translations, lang_code)
 
@@ -86,7 +103,7 @@ L: dict[str, str] = get_labels(translations, lang_code)
 # App title
 # ---------------------------------------------------------------------------
 st.title(f"🏛️ {L.get('app_title', 'Citizen Welfare Eligibility Checker')}")
-st.caption(L.get("app_subtitle", "Check your eligibility for Indian government welfare schemes"))
+st.caption(L.get("app_subtitle", "Check your eligibility for 50+ Indian government welfare schemes instantly"))
 st.divider()
 
 # ---------------------------------------------------------------------------
@@ -167,9 +184,9 @@ with btn_col2:
 # Reset handler
 # ---------------------------------------------------------------------------
 if reset_clicked:
-    # Clear all input keys from session_state to reset widgets to defaults
     for key in ["input_name", "input_age", "input_gender", "input_state",
-                "input_income", "input_employment", "input_caste", "results"]:
+                "input_income", "input_employment", "input_caste", "results",
+                "citizen_name"]:
         if key in st.session_state:
             del st.session_state[key]
     st.rerun()
@@ -206,8 +223,6 @@ if check_clicked:
         )
 
         results: list[EligibilityResult] = check_all_schemes(citizen, schemes)
-
-        # Store results in session_state so they persist after language switch
         st.session_state["results"] = results
         st.session_state["citizen_name"] = citizen.name
 
@@ -218,45 +233,90 @@ if "results" in st.session_state:
     results: list[EligibilityResult] = st.session_state["results"]
     citizen_name: str = st.session_state.get("citizen_name", "")
 
-    st.subheader(f"📊 {L.get('results_header', 'Eligibility Results')} — {citizen_name}")
-
     eligible_results = [r for r in results if r.status == "Eligible"]
     ineligible_results = [r for r in results if r.status != "Eligible"]
 
+    # Summary metrics
+    st.subheader(f"📊 {L.get('results_header', 'Eligibility Results')} — {citizen_name}")
+    m1, m2, m3 = st.columns(3)
+    m1.metric(f"📋 {L.get('total_schemes_label', 'schemes checked')}", len(results))
+    m2.metric(f"✅ {L.get('eligible_count_label', 'eligible')}", len(eligible_results))
+    m3.metric("❌ Not eligible", len(ineligible_results))
+
+    st.divider()
+
+    # -----------------------------------------------------------------------
+    # Filter & Search bar
+    # -----------------------------------------------------------------------
+    st.markdown(f"#### 🔎 {L.get('filter_header', 'Filter & Search')}")
+    f_col1, f_col2 = st.columns([1, 2])
+
+    with f_col1:
+        all_result_categories = sorted(set(
+            s.category for s in schemes
+            if any(r.scheme_name == s.name for r in results)
+        ))
+        category_options = [L.get("filter_all", "All Categories")] + all_result_categories
+        selected_category = st.selectbox(
+            L.get("filter_category_label", "Filter by Category"),
+            options=category_options,
+            key="filter_category",
+        )
+
+    with f_col2:
+        search_query = st.text_input(
+            L.get("filter_search_label", "Search Schemes"),
+            placeholder=L.get("filter_search_placeholder", "Type scheme name..."),
+            key="filter_search",
+        ).lower()
+
+    def _scheme_matches_filters(result: EligibilityResult) -> bool:
+        matching = next((s for s in schemes if s.name == result.scheme_name), None)
+        cat_ok = (
+            selected_category == L.get("filter_all", "All Categories")
+            or (matching and matching.category == selected_category)
+        )
+        search_ok = search_query == "" or search_query in result.scheme_name.lower()
+        return cat_ok and search_ok
+
+    filtered_eligible = [r for r in eligible_results if _scheme_matches_filters(r)]
+    filtered_ineligible = [r for r in ineligible_results if _scheme_matches_filters(r)]
+
+    st.divider()
+
     # --- Eligible schemes ---
-    if eligible_results:
+    if filtered_eligible:
         st.success(
             f"✅ **{L.get('results_eligible_header', 'Eligible Schemes')}** "
-            f"({len(eligible_results)} scheme(s) found)"
+            f"({len(filtered_eligible)} scheme(s) found)"
         )
-        for result in eligible_results:
-            with st.expander(f"✅ {result.scheme_name}", expanded=True):
+        for result in filtered_eligible:
+            matching = next((s for s in schemes if s.name == result.scheme_name), None)
+            category_tag = f" • 🗂️ {matching.category}" if matching else ""
+            with st.expander(f"✅ {result.scheme_name}{category_tag}", expanded=True):
+                if matching:
+                    st.caption(matching.description)
                 st.markdown(f"**{L.get('section_reasons', 'Eligibility Reasons')}**")
                 for reason in result.reasons:
                     st.write(reason)
-
-                # Find matching scheme for guidance and documents
-                matching = next((s for s in schemes if s.name == result.scheme_name), None)
                 if matching:
                     st.markdown(f"**{L.get('section_guidance', 'How to Apply')}**")
                     st.info(matching.guidance)
-
                     st.markdown(f"**{L.get('section_documents', 'Documents Required')}**")
                     for doc in matching.documents_required:
                         st.write(f"• {doc}")
+    elif eligible_results:
+        st.info("No eligible schemes match your current filter/search. Try clearing filters.")
     else:
-        st.warning(
-            L.get(
-                "results_no_eligible",
-                "No schemes matched your profile. Please verify your details.",
-            )
-        )
+        st.warning(L.get("results_no_eligible", "No schemes matched your profile. Please verify your details."))
 
     # --- Ineligible schemes ---
-    if ineligible_results:
+    if filtered_ineligible:
         st.markdown(f"#### ❌ {L.get('results_ineligible_header', 'Schemes You Do Not Qualify For')}")
-        for result in ineligible_results:
-            with st.expander(f"❌ {result.scheme_name}", expanded=False):
+        for result in filtered_ineligible:
+            matching = next((s for s in schemes if s.name == result.scheme_name), None)
+            category_tag = f" • 🗂️ {matching.category}" if matching else ""
+            with st.expander(f"❌ {result.scheme_name}{category_tag}", expanded=False):
                 st.markdown(f"**{L.get('section_reasons', 'Eligibility Reasons')}**")
                 for reason in result.reasons:
                     st.write(reason)

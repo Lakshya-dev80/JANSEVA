@@ -54,6 +54,7 @@ class Scheme:
     Attributes:
         scheme_id: Unique identifier string (e.g. 'PM_AWAS').
         name: Human-readable display name.
+        category: Category label (e.g. 'Housing', 'Scholarship', 'Health').
         description: Plain-language description of the scheme.
         applicable_states: List of state names; use ['All'] for nationwide schemes.
         guidance: Instructions on how and where to apply.
@@ -63,6 +64,7 @@ class Scheme:
 
     scheme_id: str
     name: str
+    category: str
     description: str
     applicable_states: list[str]
     guidance: str
