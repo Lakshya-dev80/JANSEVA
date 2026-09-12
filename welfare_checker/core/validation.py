@@ -24,7 +24,20 @@ VALID_EMPLOYMENT_STATUSES: list[str] = [
     "Student",
 ]
 
-VALID_CASTE_CATEGORIES: list[str] = ["General", "OBC", "SC", "ST"]
+VALID_CASTE_CATEGORIES: list[str] = [
+    "General",                          # No reservation
+    "OBC",                              # Other Backward Classes
+    "OBC (Creamy Layer)",               # OBC above income threshold — limited benefits
+    "OBC (Non-Creamy Layer)",           # OBC below income threshold — full benefits
+    "SC",                               # Scheduled Caste
+    "ST",                               # Scheduled Tribe
+    "EWS",                              # Economically Weaker Section (10% reservation)
+    "DNT",                              # De-notified Tribes (Vimukta Jatis)
+    "NT",                               # Nomadic Tribes
+    "SNT",                              # Semi-Nomadic Tribes
+    "Minorities",                       # Muslim, Christian, Sikh, Buddhist, Zoroastrian, Jain
+    "Safai Karamcharis",                # Manual scavengers and sanitation workers
+]
 
 VALID_STATES: list[str] = [
     "Andhra Pradesh",

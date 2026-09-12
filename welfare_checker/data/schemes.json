@@ -100,17 +100,44 @@
     "guidance": "Apply through scholarships.gov.in or your state's Social Welfare Department. Fresh applications accepted at the start of each academic year.",
     "documents_required": ["Aadhaar Card", "Caste Certificate (SC/ST)", "Income Certificate", "Mark Sheets", "Bank Account Details", "Institution Bonafide Certificate"],
     "rules": [
-      {"field": "caste_category", "operator": "!=", "value": "General"},
-      {"field": "caste_category", "operator": "!=", "value": "OBC"},
+      {"field": "caste_category", "operator": "==", "value": "SC"},
       {"field": "employment_status", "operator": "==", "value": "Student"},
       {"field": "annual_income", "operator": "<=", "value": 250000}
+    ]
+  },
+  {
+    "scheme_id": "ST_SCHOLARSHIP",
+    "name": "Post-Matric Scholarship for ST Students",
+    "category": "Scholarship",
+    "description": "Financial assistance to Scheduled Tribe students at post-matriculation level. Covers tuition fees, maintenance allowance, and study tour charges.",
+    "applicable_states": ["All"],
+    "guidance": "Apply through scholarships.gov.in or your state's Tribal Welfare Department. Fresh applications accepted at the start of each academic year.",
+    "documents_required": ["Aadhaar Card", "ST Certificate", "Income Certificate", "Mark Sheets", "Bank Account Details", "Institution Bonafide Certificate"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "ST"},
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "annual_income", "operator": "<=", "value": 250000}
+    ]
+  },
+  {
+    "scheme_id": "OBC_NCL_SCHOLARSHIP",
+    "name": "Post-Matric Scholarship for OBC (Non-Creamy Layer) Students",
+    "category": "Scholarship",
+    "description": "Financial assistance by Ministry of Social Justice to OBC (Non-Creamy Layer) students at post-matric level. Covers maintenance allowance and compulsory non-refundable fees.",
+    "applicable_states": ["All"],
+    "guidance": "Apply at scholarships.gov.in or through your state's OBC Welfare Department. Renew every academic year.",
+    "documents_required": ["Aadhaar Card", "OBC (Non-Creamy Layer) Certificate", "Income Certificate", "Previous Year Mark Sheet", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "OBC (Non-Creamy Layer)"},
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "annual_income", "operator": "<=", "value": 300000}
     ]
   },
   {
     "scheme_id": "OBC_SCHOLARSHIP",
     "name": "Post-Matric Scholarship for OBC Students",
     "category": "Scholarship",
-    "description": "Financial assistance provided by Ministry of Social Justice and Empowerment to OBC students studying at post-matric level. Covers maintenance allowance and compulsory non-refundable fees.",
+    "description": "Financial assistance to OBC students studying at post-matric level. Covers maintenance allowance and compulsory non-refundable fees.",
     "applicable_states": ["All"],
     "guidance": "Apply at scholarships.gov.in or through your state's OBC Welfare Department. Renew every academic year.",
     "documents_required": ["Aadhaar Card", "OBC Certificate", "Income Certificate", "Previous Year Mark Sheet", "Bank Account Details"],
@@ -794,8 +821,7 @@
     "guidance": "Apply through the Ministry of Social Justice and Empowerment or visit coaching centres empanelled under the scheme.",
     "documents_required": ["Aadhaar Card", "Caste Certificate (SC/ST)", "Income Certificate", "Educational Qualifications", "Bank Account Details"],
     "rules": [
-      {"field": "caste_category", "operator": "!=", "value": "General"},
-      {"field": "caste_category", "operator": "!=", "value": "OBC"},
+      {"field": "caste_category", "operator": "==", "value": "SC"},
       {"field": "age", "operator": ">=", "value": 18},
       {"field": "age", "operator": "<=", "value": 30},
       {"field": "annual_income", "operator": "<=", "value": 800000}
@@ -840,7 +866,7 @@
     "guidance": "Apply through your state's Social Welfare or Backward Classes Welfare Department. Also available at Navodaya Vidyalayas and Kendriya Vidyalayas.",
     "documents_required": ["Aadhaar Card", "Caste Certificate", "Class 10 Mark Sheet", "Income Certificate", "Bank Account Details"],
     "rules": [
-      {"field": "caste_category", "operator": "!=", "value": "General"},
+      {"field": "caste_category", "operator": "==", "value": "SC"},
       {"field": "employment_status", "operator": "==", "value": "Student"},
       {"field": "age", "operator": ">=", "value": 15},
       {"field": "age", "operator": "<=", "value": 21},
@@ -898,9 +924,137 @@
     "guidance": "Apply at pmdaksh.dosje.gov.in or visit your nearest NSFDC/NSKFDC office.",
     "documents_required": ["Aadhaar Card", "Caste Certificate", "Income Certificate", "Educational Qualification", "Bank Account Details"],
     "rules": [
-      {"field": "caste_category", "operator": "!=", "value": "General"},
+      {"field": "caste_category", "operator": "==", "value": "SC"},
       {"field": "age", "operator": ">=", "value": 18},
       {"field": "age", "operator": "<=", "value": 45},
+      {"field": "annual_income", "operator": "<=", "value": 300000}
+    ]
+  },
+  {
+    "scheme_id": "EWS_RESERVATION",
+    "name": "EWS Reservation & Scholarship Scheme",
+    "category": "Scholarship",
+    "description": "Provides 10% reservation in central government jobs and central educational institutions for Economically Weaker Sections (EWS) among the General category. Also provides pre-matric and post-matric scholarships.",
+    "applicable_states": ["All"],
+    "guidance": "Obtain an EWS certificate from your Tehsildar/SDM. Use it for college admissions and government job applications under the 10% EWS quota.",
+    "documents_required": ["Aadhaar Card", "EWS Income Certificate from Tehsildar/SDM", "PAN Card", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "EWS"},
+      {"field": "annual_income", "operator": "<=", "value": 800000}
+    ]
+  },
+  {
+    "scheme_id": "DNT_SCHOLARSHIP",
+    "name": "Dr. Ambedkar Pre-Matric & Post-Matric Scholarship (DNT)",
+    "category": "Scholarship",
+    "description": "Provides scholarships to students belonging to De-Notified, Nomadic, and Semi-Nomadic Tribes (DNT/NT/SNT) — communities historically treated as criminals under the Criminal Tribes Act. Covers tuition, maintenance, and hostel allowance.",
+    "applicable_states": ["All"],
+    "guidance": "Apply through the Ministry of Social Justice and Empowerment portal or your state's DNT Welfare Board.",
+    "documents_required": ["Aadhaar Card", "DNT/NT/SNT Community Certificate", "Income Certificate", "Previous Mark Sheets", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "DNT"},
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "annual_income", "operator": "<=", "value": 200000}
+    ]
+  },
+  {
+    "scheme_id": "NT_SCHOLARSHIP",
+    "name": "Scholarship for Nomadic Tribes (NT/SNT)",
+    "category": "Scholarship",
+    "description": "Provides financial assistance to students from Nomadic and Semi-Nomadic Tribe communities for pre-matric and post-matric education. Covers fees, books, and maintenance allowance.",
+    "applicable_states": ["All"],
+    "guidance": "Apply through your state's Social Welfare or Tribal Welfare Department. Some states have dedicated NT/SNT boards.",
+    "documents_required": ["Aadhaar Card", "NT/SNT Community Certificate", "Income Certificate", "Mark Sheets", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "NT"},
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "annual_income", "operator": "<=", "value": 200000}
+    ]
+  },
+  {
+    "scheme_id": "SNT_SCHOLARSHIP",
+    "name": "Scholarship for Semi-Nomadic Tribes (SNT)",
+    "category": "Scholarship",
+    "description": "Financial assistance for students from Semi-Nomadic Tribe communities to pursue pre-matric and post-matric education.",
+    "applicable_states": ["All"],
+    "guidance": "Apply through your state's Social Welfare Department or nearest SNT Welfare Board office.",
+    "documents_required": ["Aadhaar Card", "SNT Community Certificate", "Income Certificate", "Mark Sheets", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "SNT"},
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "annual_income", "operator": "<=", "value": 200000}
+    ]
+  },
+  {
+    "scheme_id": "MINORITIES_WAQF_SCHOLARSHIP",
+    "name": "Maulana Azad National Fellowship (Minorities)",
+    "category": "Scholarship",
+    "description": "Provides fellowships to students from minority communities (Muslim, Christian, Sikh, Buddhist, Zoroastrian, Jain) to pursue M.Phil and PhD. Fellowship of Rs. 31,000/month (JRF) and Rs. 35,000/month (SRF).",
+    "applicable_states": ["All"],
+    "guidance": "Apply through the University Grants Commission (UGC) portal or ugc.ac.in. Must have cleared UGC-NET or equivalent.",
+    "documents_required": ["Aadhaar Card", "Minority Community Certificate", "UGC-NET Scorecard", "University Enrollment Letter", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "Minorities"},
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "age", "operator": ">=", "value": 21},
+      {"field": "age", "operator": "<=", "value": 35}
+    ]
+  },
+  {
+    "scheme_id": "SAFAI_KARAMCHARI_SCHOLARSHIP",
+    "name": "Pre-Matric Scholarship for Children of Safai Karamcharis",
+    "category": "Scholarship",
+    "description": "Provides scholarship to children of Safai Karamcharis (sanitation workers/manual scavengers) to pursue education from Class 1 to 10. Covers maintenance allowance and study grant.",
+    "applicable_states": ["All"],
+    "guidance": "Apply through scholarships.gov.in or the National Safai Karamcharis Finance Development Corporation (NSKFDC). Parent must be a registered Safai Karamchari.",
+    "documents_required": ["Aadhaar Card", "Parent's Safai Karamchari Employment Certificate", "Income Certificate", "School Bonafide Certificate", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "Safai Karamcharis"},
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "age", "operator": ">=", "value": 5},
+      {"field": "age", "operator": "<=", "value": 16}
+    ]
+  },
+  {
+    "scheme_id": "NSKFDC_LOAN",
+    "name": "NSKFDC Loan Scheme (Safai Karamcharis)",
+    "category": "Banking & Finance",
+    "description": "Provides concessional loans to Safai Karamcharis and manual scavengers for income-generating activities, education, and rehabilitation. Interest rate as low as 2% per annum for women beneficiaries.",
+    "applicable_states": ["All"],
+    "guidance": "Apply through the National Safai Karamcharis Finance and Development Corporation (nskfdc.nic.in) or your state channelising agency.",
+    "documents_required": ["Aadhaar Card", "Safai Karamchari Certificate", "Income Certificate", "Project Report", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "Safai Karamcharis"},
+      {"field": "age", "operator": ">=", "value": 18},
+      {"field": "annual_income", "operator": "<=", "value": 300000}
+    ]
+  },
+  {
+    "scheme_id": "PM_DAKSH_OBC",
+    "name": "PM DAKSH Scheme for OBC/EWS/Minorities",
+    "category": "Employment",
+    "description": "Provides free skill development training to OBC, EBC (Extremely Backward Classes), and Minorities. Includes stipend during training and toolkit assistance after completion.",
+    "applicable_states": ["All"],
+    "guidance": "Apply at pmdaksh.dosje.gov.in or visit your nearest NBCFDC/NMDFC office.",
+    "documents_required": ["Aadhaar Card", "Community Certificate", "Income Certificate", "Educational Qualification", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "OBC (Non-Creamy Layer)"},
+      {"field": "age", "operator": ">=", "value": 18},
+      {"field": "age", "operator": "<=", "value": 45},
+      {"field": "annual_income", "operator": "<=", "value": 300000}
+    ]
+  },
+  {
+    "scheme_id": "NBCFDC_LOAN",
+    "name": "NBCFDC Loan Scheme (OBC/DNT/Minorities)",
+    "category": "Banking & Finance",
+    "description": "National Backward Classes Finance and Development Corporation provides concessional term loans to OBC, DNT, and minority individuals for education and income-generating activities at 6% p.a.",
+    "applicable_states": ["All"],
+    "guidance": "Apply through your State Channelising Agency (SCA) for NBCFDC or visit nbcfdc.gov.in.",
+    "documents_required": ["Aadhaar Card", "OBC/DNT/Minority Certificate", "Income Certificate", "Project Report", "Bank Account Details"],
+    "rules": [
+      {"field": "caste_category", "operator": "==", "value": "OBC"},
+      {"field": "age", "operator": ">=", "value": 18},
       {"field": "annual_income", "operator": "<=", "value": 300000}
     ]
   }
