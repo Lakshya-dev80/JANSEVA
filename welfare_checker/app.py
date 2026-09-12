@@ -47,7 +47,7 @@ st.set_page_config(
 _DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
 
-@st.cache_data
+@st.cache_data(ttl=None)
 def _load_schemes_cached() -> list:
     return load_schemes(os.path.join(_DATA_DIR, "schemes.json"))
 
