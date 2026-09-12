@@ -47,13 +47,13 @@ st.set_page_config(
 _DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
 
-@st.cache_data(ttl=None)
-def _load_schemes_cached() -> list:
+@st.cache_data(show_spinner=False)
+def _load_schemes_cached(_version: int = 3) -> list:
     return load_schemes(os.path.join(_DATA_DIR, "schemes.json"))
 
 
-@st.cache_data
-def _load_translations_cached() -> dict:
+@st.cache_data(show_spinner=False)
+def _load_translations_cached(_version: int = 2) -> dict:
     return load_translations(os.path.join(_DATA_DIR, "translations.json"))
 
 
