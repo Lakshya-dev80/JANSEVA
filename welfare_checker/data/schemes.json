@@ -4,1058 +4,2548 @@
     "name": "PM Awas Yojana (Urban)",
     "category": "Housing",
     "description": "Pradhan Mantri Awas Yojana (Urban) provides financial assistance to eligible families for constructing or purchasing an affordable house in urban areas. Targets economically weaker sections and low-income groups who do not own a pucca house.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply online at pmaymis.gov.in or visit your nearest Common Service Centre (CSC) or local municipality office.",
-    "documents_required": ["Aadhaar Card", "Income Certificate", "Caste Certificate (if applicable)", "Bank Passbook", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Caste Certificate (if applicable)",
+      "Bank Passbook",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://pmaymis.gov.in"
   },
   {
     "scheme_id": "PM_AWAS_RURAL",
     "name": "PM Awas Yojana (Gramin)",
     "category": "Housing",
     "description": "PMAY-G provides financial assistance to rural BPL households to construct a pucca house with basic amenities. Beneficiaries receive Rs. 1.20 lakh in plain areas and Rs. 1.30 lakh in hilly/difficult areas.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your Gram Panchayat or Block Development Office. The Awaas+ app can also be used for registration.",
-    "documents_required": ["Aadhaar Card", "BPL Ration Card", "Bank Account Details", "Land Ownership Proof", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "BPL Ration Card",
+      "Bank Account Details",
+      "Land Ownership Proof",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 120000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 120000
+      }
+    ],
+    "portal_url": "https://pmayg.nic.in"
   },
   {
     "scheme_id": "MGNREGA",
     "name": "MGNREGA (Mahatma Gandhi NREGS)",
     "category": "Employment",
     "description": "Guarantees 100 days of wage employment per year to rural households whose adult members are willing to do unskilled manual work. Strengthens livelihood security for rural families.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Visit your local Gram Panchayat office to register and get a Job Card. Work will be provided within 5 km of your residence within 15 days.",
-    "documents_required": ["Aadhaar Card", "Ration Card", "Bank Account Details", "Photograph", "Residence Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Bank Account Details",
+      "Photograph",
+      "Residence Proof"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Unemployed"},
-      {"field": "annual_income", "operator": "<=", "value": 150000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Unemployed"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 150000
+      }
+    ],
+    "portal_url": "https://nregs.nic.in"
   },
   {
     "scheme_id": "NSP_GENERAL",
     "name": "National Scholarship Portal (NSP) — General",
     "category": "Scholarship",
     "description": "The National Scholarship Portal provides various central government scholarships to students from economically weaker sections at pre-matric and post-matric levels.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply online at scholarships.gov.in. Register using your Aadhaar number. Applications open July–October each year.",
-    "documents_required": ["Aadhaar Card", "Income Certificate", "Mark Sheets", "Bank Account Details", "Institution Verification Letter"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Mark Sheets",
+      "Bank Account Details",
+      "Institution Verification Letter"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": "<=", "value": 30},
-      {"field": "annual_income", "operator": "<=", "value": 250000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 30
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 250000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "PM_KISAN",
     "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
     "category": "Agriculture",
     "description": "Provides income support of Rs. 6,000 per year in three equal instalments directly to the bank accounts of small and marginal farmer families.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Register at pmkisan.gov.in or visit your nearest Common Service Centre or Agriculture Department office.",
-    "documents_required": ["Aadhaar Card", "Land Ownership Records (Khasra/Khatauni)", "Bank Account Details", "Mobile Number Linked to Aadhaar"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Land Ownership Records (Khasra/Khatauni)",
+      "Bank Account Details",
+      "Mobile Number Linked to Aadhaar"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"},
-      {"field": "annual_income", "operator": "<=", "value": 200000},
-      {"field": "age", "operator": ">=", "value": 18}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      }
+    ],
+    "portal_url": "https://pmkisan.gov.in"
   },
   {
     "scheme_id": "SSY",
     "name": "Sukanya Samriddhi Yojana",
     "category": "Women & Girls",
     "description": "A small savings scheme for the girl child, encouraging parents to save for their daughter's future education and marriage. Offers attractive interest rate and tax benefits under Section 80C.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Open an SSY account at your nearest post office or authorised bank. The account can be opened for a girl child below 10 years of age. Minimum deposit Rs. 250/year.",
-    "documents_required": ["Girl Child's Birth Certificate", "Guardian's Aadhaar Card", "Guardian's PAN Card", "Address Proof", "Photograph of Guardian"],
+    "documents_required": [
+      "Girl Child's Birth Certificate",
+      "Guardian's Aadhaar Card",
+      "Guardian's PAN Card",
+      "Address Proof",
+      "Photograph of Guardian"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "age", "operator": "<=", "value": 10}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 10
+      }
+    ],
+    "portal_url": "https://www.indiapost.gov.in/Financial/pages/content/sukanya-samridhi-account.aspx"
   },
   {
     "scheme_id": "AB_PMJAY",
     "name": "Ayushman Bharat PM-JAY",
     "category": "Health",
     "description": "World's largest government-funded health insurance scheme. Provides health coverage of up to Rs. 5 lakh per family per year for secondary and tertiary hospitalisation.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Check eligibility at pmjay.gov.in or call helpline 14555. Get your Ayushman Card and use it at any empanelled hospital for cashless treatment.",
-    "documents_required": ["Aadhaar Card", "Ration Card", "Income Certificate", "Residence Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Income Certificate",
+      "Residence Proof"
+    ],
     "rules": [
-      {"field": "annual_income", "operator": "<=", "value": 100000}
-    ]
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 100000
+      }
+    ],
+    "portal_url": "https://pmjay.gov.in"
   },
   {
     "scheme_id": "SC_ST_SCHOLARSHIP",
     "name": "Post-Matric Scholarship for SC/ST Students",
     "category": "Scholarship",
     "description": "Financial assistance to Scheduled Caste and Scheduled Tribe students at post-matriculation level. Covers tuition fees, maintenance allowance, and study tour charges.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through scholarships.gov.in or your state's Social Welfare Department. Fresh applications accepted at the start of each academic year.",
-    "documents_required": ["Aadhaar Card", "Caste Certificate (SC/ST)", "Income Certificate", "Mark Sheets", "Bank Account Details", "Institution Bonafide Certificate"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Caste Certificate (SC/ST)",
+      "Income Certificate",
+      "Mark Sheets",
+      "Bank Account Details",
+      "Institution Bonafide Certificate"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "SC"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "annual_income", "operator": "<=", "value": 250000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "SC"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 250000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "ST_SCHOLARSHIP",
     "name": "Post-Matric Scholarship for ST Students",
     "category": "Scholarship",
     "description": "Financial assistance to Scheduled Tribe students at post-matriculation level. Covers tuition fees, maintenance allowance, and study tour charges.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through scholarships.gov.in or your state's Tribal Welfare Department. Fresh applications accepted at the start of each academic year.",
-    "documents_required": ["Aadhaar Card", "ST Certificate", "Income Certificate", "Mark Sheets", "Bank Account Details", "Institution Bonafide Certificate"],
+    "documents_required": [
+      "Aadhaar Card",
+      "ST Certificate",
+      "Income Certificate",
+      "Mark Sheets",
+      "Bank Account Details",
+      "Institution Bonafide Certificate"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "ST"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "annual_income", "operator": "<=", "value": 250000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "ST"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 250000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "OBC_NCL_SCHOLARSHIP",
     "name": "Post-Matric Scholarship for OBC (Non-Creamy Layer) Students",
     "category": "Scholarship",
     "description": "Financial assistance by Ministry of Social Justice to OBC (Non-Creamy Layer) students at post-matric level. Covers maintenance allowance and compulsory non-refundable fees.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at scholarships.gov.in or through your state's OBC Welfare Department. Renew every academic year.",
-    "documents_required": ["Aadhaar Card", "OBC (Non-Creamy Layer) Certificate", "Income Certificate", "Previous Year Mark Sheet", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "OBC (Non-Creamy Layer) Certificate",
+      "Income Certificate",
+      "Previous Year Mark Sheet",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "OBC (Non-Creamy Layer)"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "OBC (Non-Creamy Layer)"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "OBC_SCHOLARSHIP",
     "name": "Post-Matric Scholarship for OBC Students",
     "category": "Scholarship",
     "description": "Financial assistance to OBC students studying at post-matric level. Covers maintenance allowance and compulsory non-refundable fees.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at scholarships.gov.in or through your state's OBC Welfare Department. Renew every academic year.",
-    "documents_required": ["Aadhaar Card", "OBC Certificate", "Income Certificate", "Previous Year Mark Sheet", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "OBC Certificate",
+      "Income Certificate",
+      "Previous Year Mark Sheet",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "OBC"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "OBC"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "CENTRAL_SECTOR_SCHOLARSHIP",
     "name": "Central Sector Scheme of Scholarships (College Students)",
     "category": "Scholarship",
     "description": "Provides scholarships to meritorious students from low-income families to meet day-to-day expenses during higher education. Awards Rs. 10,000/year for undergraduate and Rs. 20,000/year for postgraduate students.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at scholarships.gov.in. Must have scored above 80th percentile in Class 12 board exams. Renewable annually on maintaining 60% marks.",
-    "documents_required": ["Aadhaar Card", "Class 12 Mark Sheet", "Income Certificate", "College Admission Letter", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Class 12 Mark Sheet",
+      "Income Certificate",
+      "College Admission Letter",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 17},
-      {"field": "age", "operator": "<=", "value": 25},
-      {"field": "annual_income", "operator": "<=", "value": 450000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 17
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 25
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 450000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "INSPIRE_SCHOLARSHIP",
     "name": "INSPIRE Scholarship (Science Students)",
     "category": "Scholarship",
     "description": "Innovation in Science Pursuit for Inspired Research (INSPIRE) — provides Rs. 80,000/year scholarship to top science students for pursuing BSc/MSc/Integrated MSc programs. Aimed at attracting talent to natural sciences.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply online at online-inspire.gov.in. Must be in top 1% of Class 12 board results or have cleared JEE/NEET with top rank.",
-    "documents_required": ["Aadhaar Card", "Class 12 Mark Sheet", "College Admission Proof", "Bank Account Details", "Recommendation Letter"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Class 12 Mark Sheet",
+      "College Admission Proof",
+      "Bank Account Details",
+      "Recommendation Letter"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 17},
-      {"field": "age", "operator": "<=", "value": 22}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 17
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 22
+      }
+    ],
+    "portal_url": "https://online-inspire.gov.in"
   },
   {
     "scheme_id": "BEGUM_HAZRAT_MAHAL",
     "name": "Begum Hazrat Mahal National Scholarship (Minority Girls)",
     "category": "Scholarship",
     "description": "Scholarship for meritorious girls from minority communities (Muslim, Christian, Sikh, Buddhist, Zoroastrian, Jain) studying in Classes 9–12. Provides Rs. 5,000/year for Class 9–10 and Rs. 6,000/year for Class 11–12.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through the Maulana Azad Education Foundation portal (maef.nic.in). Applications open annually.",
-    "documents_required": ["Aadhaar Card", "Minority Community Certificate", "Income Certificate", "Previous Year Mark Sheet", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Minority Community Certificate",
+      "Income Certificate",
+      "Previous Year Mark Sheet",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 13},
-      {"field": "age", "operator": "<=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 13
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://maef.nic.in"
   },
   {
     "scheme_id": "MERIT_CUM_MEANS_MINORITY",
     "name": "Merit-cum-Means Scholarship (Minority Students)",
     "category": "Scholarship",
     "description": "Provides financial assistance to minority community students pursuing professional and technical courses at undergraduate and postgraduate level. Covers course fees up to Rs. 20,000 and maintenance allowance.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at scholarships.gov.in under the Ministry of Minority Affairs scholarships. Fresh and renewal applications accepted annually.",
-    "documents_required": ["Aadhaar Card", "Minority Certificate", "Income Certificate", "Admission Letter", "Mark Sheets", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Minority Certificate",
+      "Income Certificate",
+      "Admission Letter",
+      "Mark Sheets",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": "<=", "value": 30},
-      {"field": "annual_income", "operator": "<=", "value": 250000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 30
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 250000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "PRAGATI_SCHOLARSHIP",
     "name": "PRAGATI Scholarship (Technical Education — Girls)",
     "category": "Scholarship",
     "description": "AICTE's PRAGATI scholarship for girl students pursuing technical education (degree/diploma). Provides Rs. 30,000/year for tuition and Rs. 2,000/month contingency. Up to 2 girls per family.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through the AICTE portal (scholarships.gov.in). Only for students in AICTE-approved institutions.",
-    "documents_required": ["Aadhaar Card", "Income Certificate", "Admission Letter from AICTE Institution", "Mark Sheets", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Admission Letter from AICTE Institution",
+      "Mark Sheets",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": "<=", "value": 30},
-      {"field": "annual_income", "operator": "<=", "value": 800000}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 30
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 800000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "SAKSHAM_SCHOLARSHIP",
     "name": "SAKSHAM Scholarship (Differently Abled Students)",
     "category": "Scholarship",
     "description": "AICTE's SAKSHAM scholarship for differently abled students pursuing technical education. Provides Rs. 30,000/year tuition fee and Rs. 2,000/month contingency allowance.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through scholarships.gov.in under AICTE scholarships. Must be enrolled in an AICTE-approved institution.",
-    "documents_required": ["Aadhaar Card", "Disability Certificate (40%+ disability)", "Income Certificate", "Admission Letter", "Mark Sheets", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Disability Certificate (40%+ disability)",
+      "Income Certificate",
+      "Admission Letter",
+      "Mark Sheets",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": "<=", "value": 30},
-      {"field": "annual_income", "operator": "<=", "value": 800000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 30
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 800000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "PM_VIDYA_LAKSHMI",
     "name": "PM Vidya Lakshmi Education Loan Scheme",
     "category": "Education",
     "description": "Single-window portal for students to apply for education loans from multiple banks. Covers full course fees, accommodation, books, and living expenses for studies in India and abroad.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at vidyalakshmi.co.in. Compare loans from 40+ banks and apply to multiple banks with a single form.",
-    "documents_required": ["Aadhaar Card", "PAN Card", "Admission Letter", "Fee Structure", "Income Proof of Co-applicant", "Academic Records"],
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Admission Letter",
+      "Fee Structure",
+      "Income Proof of Co-applicant",
+      "Academic Records"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 17},
-      {"field": "age", "operator": "<=", "value": 35}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 17
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 35
+      }
+    ],
+    "portal_url": "https://vidyalakshmi.co.in"
   },
   {
     "scheme_id": "EKLAVYA_SCHOLARSHIP",
     "name": "Eklavya Model Residential School Scholarship",
     "category": "Scholarship",
     "description": "Provides quality education to tribal children in remote areas through Eklavya Model Residential Schools. Fully funded residential schooling for ST students from Classes 6 to 12.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Contact your District Tribal Welfare Officer or nearest EMRS school for admission. Admission through entrance test.",
-    "documents_required": ["Aadhaar Card", "ST Certificate", "Birth Certificate", "Previous School Records", "Residence Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "ST Certificate",
+      "Birth Certificate",
+      "Previous School Records",
+      "Residence Proof"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "ST"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 10},
-      {"field": "age", "operator": "<=", "value": 14}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "ST"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 10
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 14
+      }
+    ],
+    "portal_url": "https://emrs.tribal.gov.in"
   },
   {
     "scheme_id": "NATIONAL_MEANS_MERIT",
     "name": "National Means-cum-Merit Scholarship (NMMS)",
     "category": "Scholarship",
     "description": "Scholarship for meritorious students from economically weaker sections to reduce dropout at Class 8 level and encourage continuation of study. Provides Rs. 12,000/year from Class 9 to 12.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your state's education department. Must clear the NMMS state-level examination conducted by NCERT.",
-    "documents_required": ["Aadhaar Card", "Income Certificate", "Class 7 Mark Sheet", "Bank Account Details", "School Bonafide Certificate"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Class 7 Mark Sheet",
+      "Bank Account Details",
+      "School Bonafide Certificate"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 13},
-      {"field": "age", "operator": "<=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 150000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 13
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 150000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "JANANI_SURAKSHA",
     "name": "Janani Suraksha Yojana",
     "category": "Women & Girls",
     "description": "Promotes institutional delivery among poor pregnant women to reduce maternal and neonatal mortality. Provides cash assistance for delivery and post-natal care in government health facilities.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Register at your nearest Anganwadi centre or Primary Health Centre (PHC) during pregnancy. Cash benefit is provided directly to the mother after institutional delivery.",
-    "documents_required": ["Aadhaar Card", "BPL Card / Income Certificate", "MCH Card (Maternal Child Health)", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "BPL Card / Income Certificate",
+      "MCH Card (Maternal Child Health)",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 45},
-      {"field": "annual_income", "operator": "<=", "value": 100000}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 45
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 100000
+      }
+    ],
+    "portal_url": "https://nhm.gov.in"
   },
   {
     "scheme_id": "BETI_BACHAO",
     "name": "Beti Bachao Beti Padhao",
     "category": "Women & Girls",
     "description": "Aims to address the declining Child Sex Ratio and promote welfare of girl children through prevention of gender-biased sex selective elimination and ensuring survival, protection and education of the girl child.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Contact your local District Magistrate office, Women & Child Development Department, or Anganwadi centre for programs and benefits in your district.",
-    "documents_required": ["Girl Child's Birth Certificate", "Aadhaar Card", "Residence Proof"],
+    "documents_required": [
+      "Girl Child's Birth Certificate",
+      "Aadhaar Card",
+      "Residence Proof"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "age", "operator": "<=", "value": 18}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 18
+      }
+    ],
+    "portal_url": "https://wcd.nic.in/bbbp-schemes"
   },
   {
     "scheme_id": "UJJWALA_YOJANA",
     "name": "Pradhan Mantri Ujjwala Yojana",
     "category": "Women & Girls",
     "description": "Provides free LPG connections to women from BPL households to safeguard their health and reduce dependence on fossil fuels for cooking. Beneficiaries get a free cylinder and stove.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at your nearest LPG distributor or online at pmuy.gov.in. Submit the KYC form along with BPL/Ration Card.",
-    "documents_required": ["Aadhaar Card", "BPL Ration Card", "Bank Account Details", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "BPL Ration Card",
+      "Bank Account Details",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 100000}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 100000
+      }
+    ],
+    "portal_url": "https://pmuy.gov.in"
   },
   {
     "scheme_id": "MATERNITY_BENEFIT",
     "name": "Pradhan Mantri Matru Vandana Yojana (PMMVY)",
     "category": "Women & Girls",
     "description": "Provides maternity benefit of Rs. 5,000 in three instalments for the first live birth to pregnant and lactating women. Aims to partially compensate for wage loss during pregnancy and lactation.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Register at your nearest Anganwadi centre or health facility. Register within 150 days of pregnancy. Claim each instalment at defined stages.",
-    "documents_required": ["Aadhaar Card", "MCP Card", "Bank Account Details", "Ration Card"],
+    "documents_required": [
+      "Aadhaar Card",
+      "MCP Card",
+      "Bank Account Details",
+      "Ration Card"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "age", "operator": ">=", "value": 19},
-      {"field": "age", "operator": "<=", "value": 45}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 19
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 45
+      }
+    ],
+    "portal_url": "https://pmmvy.wcd.gov.in"
   },
   {
     "scheme_id": "NARI_SHAKTI_PURASKAR",
     "name": "Stree Shakti Entrepreneurship Scheme",
     "category": "Women & Girls",
     "description": "Provides collateral-free loans and handholding support to women entrepreneurs. Mudra Yojana's Shishu, Kishor, and Tarun categories specifically target women-led businesses with preferential interest rates.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at any nationalised bank, regional rural bank, or MFI. Visit mudra.org.in for details and application form.",
-    "documents_required": ["Aadhaar Card", "PAN Card", "Business Plan", "Bank Account Details", "Address Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Business Plan",
+      "Bank Account Details",
+      "Address Proof"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      }
+    ],
+    "portal_url": "https://mudra.org.in"
   },
   {
     "scheme_id": "OLD_AGE_PENSION",
     "name": "Indira Gandhi National Old Age Pension (IGNOAPS)",
     "category": "Elderly",
     "description": "Provides monthly pension to elderly persons aged 60 years and above belonging to BPL families. Pension amount: Rs. 200/month for 60–79 years and Rs. 500/month for 80 years and above.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at your local Gram Panchayat or Block Development Office (rural) or Municipal Office (urban). Submit the prescribed application form with required documents.",
-    "documents_required": ["Aadhaar Card", "Age Proof (Birth Certificate/School Certificate)", "BPL Card", "Bank Account Details", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Age Proof (Birth Certificate/School Certificate)",
+      "BPL Card",
+      "Bank Account Details",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 60},
-      {"field": "annual_income", "operator": "<=", "value": 100000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 60
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 100000
+      }
+    ],
+    "portal_url": "https://nsap.nic.in"
   },
   {
     "scheme_id": "WIDOW_PENSION",
     "name": "Indira Gandhi National Widow Pension Scheme",
     "category": "Women & Girls",
     "description": "Provides monthly pension of Rs. 300 to widows aged 40–79 years from BPL families. Aims to provide social security to vulnerable widows.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at your local Gram Panchayat or Municipal Office with a death certificate of the deceased spouse and BPL card.",
-    "documents_required": ["Aadhaar Card", "Death Certificate of Spouse", "Age Proof", "BPL Card", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Death Certificate of Spouse",
+      "Age Proof",
+      "BPL Card",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "age", "operator": ">=", "value": 40},
-      {"field": "age", "operator": "<=", "value": 79},
-      {"field": "annual_income", "operator": "<=", "value": 100000}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 40
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 79
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 100000
+      }
+    ],
+    "portal_url": "https://nsap.nic.in"
   },
   {
     "scheme_id": "DISABILITY_PENSION",
     "name": "Indira Gandhi National Disability Pension Scheme",
     "category": "Disability",
     "description": "Provides monthly pension of Rs. 300 to persons with severe or multiple disabilities aged 18–79 years from BPL families.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at your local Gram Panchayat or Municipal Office. Requires disability certificate from a government medical authority.",
-    "documents_required": ["Aadhaar Card", "Disability Certificate (80%+ disability)", "Age Proof", "BPL Card", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Disability Certificate (80%+ disability)",
+      "Age Proof",
+      "BPL Card",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 79},
-      {"field": "annual_income", "operator": "<=", "value": 100000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 79
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 100000
+      }
+    ],
+    "portal_url": "https://nsap.nic.in"
   },
   {
     "scheme_id": "DEEN_DAYAL_DISABILITY",
     "name": "Deen Dayal Disabled Rehabilitation Scheme",
     "category": "Disability",
     "description": "Provides financial assistance to NGOs for running projects for education, vocational training, rehabilitation, and empowerment of persons with disabilities.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Contact your nearest District Disability Rehabilitation Centre (DDRC) or Composite Regional Centre for assistance and referral to supported programmes.",
-    "documents_required": ["Aadhaar Card", "Disability Certificate", "Income Certificate", "Residence Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Disability Certificate",
+      "Income Certificate",
+      "Residence Proof"
+    ],
     "rules": [
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://disabilityaffairs.gov.in"
   },
   {
     "scheme_id": "PM_MUDRA",
     "name": "PM MUDRA Yojana",
     "category": "Employment",
     "description": "Provides loans up to Rs. 10 lakh to non-corporate, non-farm small/micro enterprises. Three categories: Shishu (up to Rs. 50,000), Kishor (Rs. 50,001–5 lakh), Tarun (Rs. 5–10 lakh).",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at any bank, NBFC, or MFI. Visit mudra.org.in. No collateral required for Shishu and Kishor categories.",
-    "documents_required": ["Aadhaar Card", "PAN Card", "Business Plan / Quotation", "Address Proof", "Photographs", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Business Plan / Quotation",
+      "Address Proof",
+      "Photographs",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      }
+    ],
+    "portal_url": "https://mudra.org.in"
   },
   {
     "scheme_id": "STARTUP_INDIA",
     "name": "Startup India Seed Fund Scheme",
     "category": "Employment",
     "description": "Provides financial assistance to startups for proof of concept, prototype development, product trials, market entry, and commercialisation. Grants up to Rs. 20 lakh for validation and Rs. 50 lakh as loans.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through the Startup India portal (startupindia.gov.in). Register your startup with DPIIT first to be eligible.",
-    "documents_required": ["Aadhaar Card", "PAN Card", "DPIIT Recognition Certificate", "Business Plan", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "DPIIT Recognition Certificate",
+      "Business Plan",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 45},
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 45
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      }
+    ],
+    "portal_url": "https://startupindia.gov.in"
   },
   {
     "scheme_id": "PMEGP",
     "name": "PM Employment Generation Programme (PMEGP)",
     "category": "Employment",
     "description": "Generates employment in rural and urban areas through setting up new micro enterprises. Provides subsidy of 15–35% on project cost. Maximum project cost Rs. 25 lakh (manufacturing) and Rs. 10 lakh (service).",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply online at kviconline.gov.in or visit your nearest KVIC/KVIB/DIC office.",
-    "documents_required": ["Aadhaar Card", "PAN Card", "Educational Qualification Certificate", "Project Report", "Bank Account Details", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Educational Qualification Certificate",
+      "Project Report",
+      "Bank Account Details",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "employment_status", "operator": "==", "value": "Unemployed"}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Unemployed"
+      }
+    ],
+    "portal_url": "https://kviconline.gov.in"
   },
   {
     "scheme_id": "SKILL_INDIA",
     "name": "Pradhan Mantri Kaushal Vikas Yojana (PMKVY)",
     "category": "Employment",
     "description": "Provides industry-relevant skill training to enable youth to secure better livelihoods. Free short-term training with certification. Monetary reward for successful completion and placement assistance.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Find a nearby training centre at pmkvyofficial.org or call 1800-123-9626. Register and choose from 300+ job roles across 40+ sectors.",
-    "documents_required": ["Aadhaar Card", "Bank Account Details", "Educational Qualification Proof", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Educational Qualification Proof",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 15},
-      {"field": "age", "operator": "<=", "value": 45},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 15
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 45
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://pmkvyofficial.org"
   },
   {
     "scheme_id": "PMSBY",
     "name": "PM Suraksha Bima Yojana (Accident Insurance)",
     "category": "Insurance",
     "description": "Provides accidental death and disability insurance cover of Rs. 2 lakh for accidental death/permanent disability and Rs. 1 lakh for partial disability. Annual premium of only Rs. 20.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Enrol through your bank account by giving consent to auto-debit Rs. 20/year. Available at all public sector banks and many private banks.",
-    "documents_required": ["Aadhaar Card", "Bank Account Details", "Consent Form"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Consent Form"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 70}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 70
+      }
+    ],
+    "portal_url": "https://jansuraksha.gov.in"
   },
   {
     "scheme_id": "PMJJBY",
     "name": "PM Jeevan Jyoti Bima Yojana (Life Insurance)",
     "category": "Insurance",
     "description": "Provides life insurance cover of Rs. 2 lakh for death due to any reason. Annual premium of Rs. 436 auto-debited from bank account.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Enrol through your savings bank account. Give auto-debit consent for Rs. 436/year. Available at all major banks and India Post.",
-    "documents_required": ["Aadhaar Card", "Bank Account Details", "Consent Form"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Consent Form"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 50}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 50
+      }
+    ],
+    "portal_url": "https://jansuraksha.gov.in"
   },
   {
     "scheme_id": "APY",
     "name": "Atal Pension Yojana",
     "category": "Insurance",
     "description": "Pension scheme for unorganised sector workers. Provides guaranteed monthly pension of Rs. 1,000–5,000 after age 60 based on contribution. Government co-contributes 50% for eligible subscribers.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Open an APY account at your bank or post office with a savings account. Monthly auto-debit contribution based on chosen pension amount.",
-    "documents_required": ["Aadhaar Card", "Bank Account Details", "Mobile Number"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Mobile Number"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 40},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 40
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://npscra.nsdl.co.in/scheme-details.php"
   },
   {
     "scheme_id": "FASAL_BIMA",
     "name": "Pradhan Mantri Fasal Bima Yojana (Crop Insurance)",
     "category": "Agriculture",
     "description": "Provides financial support to farmers suffering crop loss/damage due to unforeseen events like natural calamities, pests, and diseases. Farmer pays only 2% premium for Kharif and 1.5% for Rabi crops.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Enrol through your bank (if you have a crop loan) or any bank, CSC, or insurance company before the deadline for each season.",
-    "documents_required": ["Aadhaar Card", "Land Records (Khasra)", "Bank Account Details", "Sowing Certificate"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Land Records (Khasra)",
+      "Bank Account Details",
+      "Sowing Certificate"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"},
-      {"field": "age", "operator": ">=", "value": 18}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      }
+    ],
+    "portal_url": "https://pmfby.gov.in"
   },
   {
     "scheme_id": "KISAN_CREDIT_CARD",
     "name": "Kisan Credit Card (KCC)",
     "category": "Agriculture",
     "description": "Provides short-term formal credit to farmers for agricultural operations, post-harvest expenses, and allied activities. Credit limit based on land holding with interest subvention — effective rate around 4% per year.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at any bank, cooperative bank, or Regional Rural Bank. Revised KCC scheme is operational across all banks.",
-    "documents_required": ["Aadhaar Card", "Land Ownership/Lease Records", "Photograph", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Land Ownership/Lease Records",
+      "Photograph",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"},
-      {"field": "age", "operator": ">=", "value": 18}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      }
+    ],
+    "portal_url": "https://pmkisan.gov.in"
   },
   {
     "scheme_id": "SOIL_HEALTH_CARD",
     "name": "Soil Health Card Scheme",
     "category": "Agriculture",
     "description": "Provides farmers with a Soil Health Card containing crop-wise recommendations of nutrients and fertilisers required to improve soil health. Aims to reduce use of chemical fertilisers and improve productivity.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Contact your local Krishi Vigyan Kendra or Agriculture Department office for soil sample collection. Cards issued every 2 years.",
-    "documents_required": ["Aadhaar Card", "Land Records"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Land Records"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"},
-      {"field": "age", "operator": ">=", "value": 18}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      }
+    ],
+    "portal_url": "https://soilhealth.dac.gov.in"
   },
   {
     "scheme_id": "PM_JAN_DHAN",
     "name": "Pradhan Mantri Jan Dhan Yojana",
     "category": "Banking & Finance",
     "description": "Ensures access to financial services for all households — savings/deposit accounts, remittance, credit, insurance, and pension. Zero balance accounts with RuPay debit card and Rs. 2 lakh accident insurance.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Open an account at any bank branch or Business Correspondent (BC) point. No minimum balance required. Bring Aadhaar and a photograph.",
-    "documents_required": ["Aadhaar Card", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 10},
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 10
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://pmjdy.gov.in"
   },
   {
     "scheme_id": "STAND_UP_INDIA",
     "name": "Stand Up India Scheme (SC/ST/Women Entrepreneurs)",
     "category": "Banking & Finance",
     "description": "Facilitates bank loans between Rs. 10 lakh and Rs. 1 crore to at least one SC or ST borrower and one woman borrower per bank branch for setting up a greenfield enterprise.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at standupmitra.in or directly at any scheduled commercial bank branch. Handholding support is provided through SIDBI and NABARD.",
-    "documents_required": ["Aadhaar Card", "PAN Card", "Caste Certificate (for SC/ST)", "Business Plan", "Address Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Caste Certificate (for SC/ST)",
+      "Business Plan",
+      "Address Proof"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      }
+    ],
+    "portal_url": "https://standupmitra.in"
   },
   {
     "scheme_id": "NATIONAL_FOOD_SECURITY",
     "name": "National Food Security Act (NFSA) — PDS",
     "category": "Food & Nutrition",
     "description": "Provides subsidised food grains to up to 75% of rural and 50% of urban population. Priority households receive 5 kg of food grains per person per month at Rs. 3/kg (rice), Rs. 2/kg (wheat), Re. 1/kg (coarse grains).",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Register with your state government to obtain a Ration Card. Visit your local Food & Civil Supplies Department office.",
-    "documents_required": ["Aadhaar Card", "Residence Proof", "Income Certificate", "Family Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Residence Proof",
+      "Income Certificate",
+      "Family Details"
+    ],
     "rules": [
-      {"field": "annual_income", "operator": "<=", "value": 150000}
-    ]
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 150000
+      }
+    ],
+    "portal_url": "https://nfsa.gov.in"
   },
   {
     "scheme_id": "PM_POSHAN",
     "name": "PM POSHAN (Mid-Day Meal Scheme)",
     "category": "Food & Nutrition",
     "description": "Provides hot cooked meals to children in government and government-aided schools from Class 1 to 8. Aims to improve nutritional status, increase enrolment, and reduce dropout rates.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Automatic benefit for all children enrolled in government or government-aided primary and upper primary schools. No separate application required.",
-    "documents_required": ["School Enrollment Certificate"],
+    "documents_required": [
+      "School Enrollment Certificate"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 5},
-      {"field": "age", "operator": "<=", "value": 14}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 5
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 14
+      }
+    ],
+    "portal_url": "https://pmposhan.education.gov.in"
   },
   {
     "scheme_id": "INTEGRATED_CHILD",
     "name": "Integrated Child Development Services (ICDS)",
     "category": "Food & Nutrition",
     "description": "Provides supplementary nutrition, immunisation, health check-ups, referral services, pre-school education, and nutrition & health education to children under 6 years and pregnant/lactating mothers.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Visit your nearest Anganwadi centre. Services are available for all children under 6 and pregnant/lactating women in the catchment area.",
-    "documents_required": ["Aadhaar Card", "Birth Certificate (for children)", "MCH Card (for mothers)"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Birth Certificate (for children)",
+      "MCH Card (for mothers)"
+    ],
     "rules": [
-      {"field": "age", "operator": "<=", "value": 6},
-      {"field": "annual_income", "operator": "<=", "value": 150000}
-    ]
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 6
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 150000
+      }
+    ],
+    "portal_url": "https://icds-wcd.nic.in"
   },
   {
     "scheme_id": "JALDOOT_WATER",
     "name": "Jal Jeevan Mission (Har Ghar Jal)",
     "category": "Water & Sanitation",
     "description": "Aims to provide safe and adequate drinking water through individual household tap connections to all rural households by 2024. Provides functional household tap connection (FHTC) of 55 litres per capita per day.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Contact your Gram Panchayat or local Panchayati Raj Institution. Village Water & Sanitation Committees (VWSCs) manage the connections.",
-    "documents_required": ["Aadhaar Card", "Residence Proof", "Land Ownership/No Objection Certificate"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Residence Proof",
+      "Land Ownership/No Objection Certificate"
+    ],
     "rules": [
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://jaljeevanmission.gov.in"
   },
   {
     "scheme_id": "SWACHH_BHARAT",
     "name": "Swachh Bharat Mission — Toilet Construction",
     "category": "Water & Sanitation",
     "description": "Provides incentive of Rs. 12,000 for construction of individual household latrines (IHHL) to BPL and selected APL households to eliminate open defecation.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at your Gram Panchayat or Block Development Office. Amount transferred directly to beneficiary bank account after verification.",
-    "documents_required": ["Aadhaar Card", "BPL Card", "Bank Account Details", "Land Ownership Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "BPL Card",
+      "Bank Account Details",
+      "Land Ownership Proof"
+    ],
     "rules": [
-      {"field": "annual_income", "operator": "<=", "value": 120000}
-    ]
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 120000
+      }
+    ],
+    "portal_url": "https://swachhbharatmission.gov.in"
   },
   {
     "scheme_id": "SOLAR_ROOFTOP",
     "name": "PM Surya Ghar Muft Bijli Yojana (Solar Rooftop)",
     "category": "Energy",
     "description": "Provides subsidy for installing rooftop solar panels. Households get 300 units of free electricity per month. Central financial assistance: Rs. 30,000 for 1 kW, Rs. 60,000 for 2 kW, Rs. 78,000 for 3+ kW.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at pmsuryaghar.gov.in. Register, choose an empanelled vendor, get the system installed, and apply for subsidy.",
-    "documents_required": ["Aadhaar Card", "Electricity Bill", "Bank Account Details", "Property Ownership Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Electricity Bill",
+      "Bank Account Details",
+      "Property Ownership Proof"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 1500000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 1500000
+      }
+    ],
+    "portal_url": "https://pmsuryaghar.gov.in"
   },
   {
     "scheme_id": "PM_SVANidhi",
     "name": "PM SVANidhi (Street Vendor Loan Scheme)",
     "category": "Employment",
     "description": "Provides affordable working capital loans to street vendors to resume their livelihoods affected by COVID-19. Initial loan of Rs. 10,000 with enhancement to Rs. 20,000 and Rs. 50,000 on timely repayment.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at pmsvanidhi.mohua.gov.in or through your Urban Local Body or bank. Vending certificate required.",
-    "documents_required": ["Aadhaar Card", "Vending Certificate / Letter of Recommendation from ULB", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Vending Certificate / Letter of Recommendation from ULB",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"},
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://pmsvanidhi.mohua.gov.in"
   },
   {
     "scheme_id": "E_SHRAM",
     "name": "e-SHRAM Portal — Unorganised Worker Registration",
     "category": "Employment",
     "description": "National database of unorganised workers providing a Universal Account Number (UAN). Registered workers get Rs. 2 lakh accident insurance under PMSBY and access to future social security benefits.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Register at eshram.gov.in or through the Common Service Centre. Requires Aadhaar and mobile number linked to Aadhaar.",
-    "documents_required": ["Aadhaar Card", "Bank Account Details", "Mobile Number Linked to Aadhaar"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Mobile Number Linked to Aadhaar"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 16},
-      {"field": "age", "operator": "<=", "value": 59},
-      {"field": "annual_income", "operator": "<=", "value": 250000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 16
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 59
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 250000
+      }
+    ],
+    "portal_url": "https://eshram.gov.in"
   },
   {
     "scheme_id": "NATIONAL_APPRENTICESHIP",
     "name": "National Apprenticeship Promotion Scheme (NAPS)",
     "category": "Employment",
     "description": "Promotes apprenticeship training by sharing 25% of the stipend (max Rs. 1,500/month) with employers. Apprentices gain industry experience with a monthly stipend and a government certificate.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Find apprenticeship opportunities at apprenticeshipindia.gov.in. Register as a candidate, search for openings, and apply directly.",
-    "documents_required": ["Aadhaar Card", "Educational Qualification Certificates", "Bank Account Details", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Educational Qualification Certificates",
+      "Bank Account Details",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 14},
-      {"field": "age", "operator": "<=", "value": 35},
-      {"field": "employment_status", "operator": "==", "value": "Unemployed"}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 14
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 35
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Unemployed"
+      }
+    ],
+    "portal_url": "https://apprenticeshipindia.gov.in"
   },
   {
     "scheme_id": "MINORITY_SCHOLARSHIP_PREMATRIC",
     "name": "Pre-Matric Scholarship for Minority Students",
     "category": "Scholarship",
     "description": "Financial assistance to minority community students studying in Classes 1–10 to support their school education. Covers maintenance allowance and ad-hoc grant.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at scholarships.gov.in under Ministry of Minority Affairs. Applications open every year in July.",
-    "documents_required": ["Aadhaar Card", "Minority Certificate", "Income Certificate", "Previous Year Mark Sheet", "Bank Account Details", "School Bonafide Certificate"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Minority Certificate",
+      "Income Certificate",
+      "Previous Year Mark Sheet",
+      "Bank Account Details",
+      "School Bonafide Certificate"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 6},
-      {"field": "age", "operator": "<=", "value": 16},
-      {"field": "annual_income", "operator": "<=", "value": 100000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 6
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 16
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 100000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "NATIONAL_TRUST_DISABILITY",
     "name": "National Trust Welfare Scheme (Niramaya Health Insurance)",
     "category": "Disability",
     "description": "Health insurance scheme for persons with autism, cerebral palsy, mental retardation, and multiple disabilities. Covers OPD, hospitalisation, therapies, and surgeries up to Rs. 1 lakh/year at a premium of Rs. 250–500/year.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through registered organisations of the National Trust at nationaltrust.nic.in. Rs. 250/year premium for BPL families.",
-    "documents_required": ["Aadhaar Card", "Disability Certificate", "Income Certificate / BPL Card", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Disability Certificate",
+      "Income Certificate / BPL Card",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://nationaltrust.nic.in"
   },
   {
     "scheme_id": "UJALA_LED",
     "name": "UJALA Scheme (LED Bulb Distribution)",
     "category": "Energy",
     "description": "Provides energy-efficient LED bulbs to domestic consumers at subsidised rates. Replaces old incandescent bulbs and CFLs, reducing electricity bills by up to 90%.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Obtain LED bulbs at your nearest DISCOM office by submitting your electricity bill and Aadhaar. Exchange old bulbs for LEDs.",
-    "documents_required": ["Aadhaar Card", "Electricity Bill"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Electricity Bill"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://ujala.gov.in"
   },
   {
     "scheme_id": "PM_VAYA_VANDANA",
     "name": "PM Vaya Vandana Yojana (Senior Citizen Pension)",
     "category": "Elderly",
     "description": "Provides assured pension/return of 7.4% p.a. to senior citizens on a lump sum investment. Maximum investment Rs. 15 lakh per senior citizen. Managed by LIC of India.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at any LIC office or online at licindia.in. Investment from savings or pension corpus. Pension paid monthly/quarterly/half-yearly/yearly.",
-    "documents_required": ["Aadhaar Card", "PAN Card", "Age Proof", "Bank Account Details", "Cancelled Cheque"],
+    "documents_required": [
+      "Aadhaar Card",
+      "PAN Card",
+      "Age Proof",
+      "Bank Account Details",
+      "Cancelled Cheque"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 60}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 60
+      }
+    ],
+    "portal_url": "https://licindia.in"
   },
   {
     "scheme_id": "RASHTRIYA_SWASTHYA_BIMA",
     "name": "Rashtriya Swasthya Bima Yojana (RSBY)",
     "category": "Health",
     "description": "Health insurance scheme for BPL families providing cashless hospitalisation up to Rs. 30,000 per family per year. Smart card-based scheme operational in states not covered by PM-JAY.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Enrolment is conducted by state government through camps. Smart card issued at enrolment. Use the card at any empanelled hospital.",
-    "documents_required": ["Aadhaar Card", "BPL Ration Card", "Family Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "BPL Ration Card",
+      "Family Photograph"
+    ],
     "rules": [
-      {"field": "annual_income", "operator": "<=", "value": 100000}
-    ]
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 100000
+      }
+    ],
+    "portal_url": "https://nhm.gov.in"
   },
   {
     "scheme_id": "NATIONAL_HEALTH_MISSION",
     "name": "National Health Mission (NHM) Free Medicines",
     "category": "Health",
     "description": "Provides free essential medicines and diagnostics to patients at government health facilities under the Jan Aushadhi scheme. Over 600 essential medicines available free at all government hospitals.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Visit any government hospital, PHC, CHC, or District Hospital. Prescription by government doctor entitles you to free medicines from hospital pharmacy.",
-    "documents_required": ["Aadhaar Card", "Government Doctor Prescription"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Government Doctor Prescription"
+    ],
     "rules": [
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://nhm.gov.in"
   },
   {
     "scheme_id": "DRIP_IRRIGATION",
     "name": "PM Krishi Sinchayee Yojana (PMKSY — Drip Irrigation)",
     "category": "Agriculture",
     "description": "Promotes micro-irrigation (drip and sprinkler) to improve water use efficiency in agriculture. Provides 55% subsidy for small/marginal farmers and 45% for other farmers on micro-irrigation equipment.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at your state Agriculture Department or Horticulture Department. Subsidy credited to farmer account after installation.",
-    "documents_required": ["Aadhaar Card", "Land Records", "Bank Account Details", "Quotation from Manufacturer"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Land Records",
+      "Bank Account Details",
+      "Quotation from Manufacturer"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Self-Employed"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 500000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Self-Employed"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 500000
+      }
+    ],
+    "portal_url": "https://pmksy.gov.in"
   },
   {
     "scheme_id": "NATIONAL_RURAL_LIVELIHOOD",
     "name": "Deendayal Antyodaya Yojana — NRLM (Self Help Groups)",
     "category": "Women & Girls",
     "description": "Mobilises rural poor households into Self Help Groups (SHGs) and provides them financial literacy, bank linkage, and livelihood support. Women SHG members get Rs. 1,500 revolving fund and bank credit.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Contact your nearest Block office or Panchayat for SHG formation. Women's SHGs are linked to banks after 6 months of functioning.",
-    "documents_required": ["Aadhaar Card", "Bank Account Details", "Photograph", "Residence Proof"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Bank Account Details",
+      "Photograph",
+      "Residence Proof"
+    ],
     "rules": [
-      {"field": "gender", "operator": "==", "value": "Female"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 150000}
-    ]
+      {
+        "field": "gender",
+        "operator": "==",
+        "value": "Female"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 150000
+      }
+    ],
+    "portal_url": "https://aajeevika.gov.in"
   },
   {
     "scheme_id": "ATAL_INNOVATION",
     "name": "Atal Tinkering Labs (School Innovation)",
     "category": "Education",
     "description": "Sets up Tinkering Labs in schools to foster innovation, creativity, and entrepreneurship mindset among students aged 6–18 years. Labs equipped with 3D printers, robotics kits, IoT devices, and more.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Schools apply through AIM portal (aim.gov.in). Students in ATL schools can participate in Atal Innovation Challenges to win prizes up to Rs. 1 lakh.",
-    "documents_required": ["School Enrollment Certificate", "Aadhaar Card"],
+    "documents_required": [
+      "School Enrollment Certificate",
+      "Aadhaar Card"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 6},
-      {"field": "age", "operator": "<=", "value": 18}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 6
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 18
+      }
+    ],
+    "portal_url": "https://aim.gov.in"
   },
   {
     "scheme_id": "DIGITAL_SAKSHARTA",
     "name": "Pradhan Mantri Gramin Digital Saksharta Abhiyan (PMGDISHA)",
     "category": "Education",
     "description": "Makes 6 crore rural households digitally literate by training them to operate computers, smartphones, and internet services for government schemes, cashless transactions, and daily tasks.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Enrol at your nearest Common Service Centre or PMGDISHA training centre. 20-hour free training course with certificate issued by NIELIT.",
-    "documents_required": ["Aadhaar Card", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 14},
-      {"field": "age", "operator": "<=", "value": 60},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 14
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 60
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://pmgdisha.in"
   },
   {
     "scheme_id": "FREE_COACHING_SC_ST",
     "name": "Free Coaching for SC/ST Students (Competitive Exams)",
     "category": "Scholarship",
     "description": "Provides free coaching to SC/ST students for competitive examinations like UPSC, SSC, banking exams, state PSC, JEE, NEET, and other professional exams. Coaching fee plus living allowance provided.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through the Ministry of Social Justice and Empowerment or visit coaching centres empanelled under the scheme.",
-    "documents_required": ["Aadhaar Card", "Caste Certificate (SC/ST)", "Income Certificate", "Educational Qualifications", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Caste Certificate (SC/ST)",
+      "Income Certificate",
+      "Educational Qualifications",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "SC"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 30},
-      {"field": "annual_income", "operator": "<=", "value": 800000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "SC"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 30
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 800000
+      }
+    ],
+    "portal_url": "https://socialjustice.gov.in"
   },
   {
     "scheme_id": "NREGA_URBAN",
     "name": "PM Garib Kalyan Rojgar Abhiyaan",
     "category": "Employment",
     "description": "Provides employment and livelihood opportunities to returning migrant workers and rural citizens. 25 types of works including construction of roads, housing, plantation, and water conservation.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Register at your local Gram Panchayat or Block Development Office. Identity and residence proof required.",
-    "documents_required": ["Aadhaar Card", "Residence Proof", "Bank Account Details", "Photograph"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Residence Proof",
+      "Bank Account Details",
+      "Photograph"
+    ],
     "rules": [
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 60},
-      {"field": "employment_status", "operator": "==", "value": "Unemployed"},
-      {"field": "annual_income", "operator": "<=", "value": 150000}
-    ]
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 60
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Unemployed"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 150000
+      }
+    ],
+    "portal_url": "https://nregs.nic.in"
   },
   {
     "scheme_id": "MINORITY_FREE_COACHING",
     "name": "Free Coaching for Minority Students",
     "category": "Scholarship",
     "description": "Provides free coaching to minority community students for Class 10, 12, and competitive exams. Coaching fee, study material, and monthly stipend provided.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through the Maulana Azad Education Foundation (maef.nic.in) or Ministry of Minority Affairs portal.",
-    "documents_required": ["Aadhaar Card", "Minority Certificate", "Income Certificate", "Previous Year Mark Sheet", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Minority Certificate",
+      "Income Certificate",
+      "Previous Year Mark Sheet",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 14},
-      {"field": "age", "operator": "<=", "value": 30},
-      {"field": "annual_income", "operator": "<=", "value": 600000}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 14
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 30
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 600000
+      }
+    ],
+    "portal_url": "https://maef.nic.in"
   },
   {
     "scheme_id": "SC_ST_FREE_COACHING",
     "name": "NEET/JEE Free Coaching for SC/ST/OBC Students",
     "category": "Scholarship",
     "description": "State and central government initiatives providing free coaching for NEET and JEE to meritorious SC/ST/OBC students aspiring for medical and engineering colleges.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your state's Social Welfare or Backward Classes Welfare Department. Also available at Navodaya Vidyalayas and Kendriya Vidyalayas.",
-    "documents_required": ["Aadhaar Card", "Caste Certificate", "Class 10 Mark Sheet", "Income Certificate", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Caste Certificate",
+      "Class 10 Mark Sheet",
+      "Income Certificate",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "SC"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 15},
-      {"field": "age", "operator": "<=", "value": 21},
-      {"field": "annual_income", "operator": "<=", "value": 500000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "SC"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 15
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 21
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 500000
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "AICTE_DOCTORAL",
     "name": "AICTE Doctoral Fellowship Scheme",
     "category": "Scholarship",
     "description": "Provides monthly fellowship to PhD students pursuing full-time doctoral research in AICTE-approved institutions. Fellowship amount: Rs. 25,000/month for first two years, Rs. 28,000/month thereafter.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your institution to AICTE. Must be enrolled in a full-time PhD program at an AICTE-approved institution.",
-    "documents_required": ["Aadhaar Card", "PhD Admission Letter", "AICTE Institution Approval", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "PhD Admission Letter",
+      "AICTE Institution Approval",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 21},
-      {"field": "age", "operator": "<=", "value": 35}
-    ]
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 21
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 35
+      }
+    ],
+    "portal_url": "https://scholarships.gov.in"
   },
   {
     "scheme_id": "NSFDC_LOAN",
     "name": "National SC Finance & Development Corporation Loans",
     "category": "Banking & Finance",
     "description": "Provides concessional loans to Scheduled Caste individuals below double the poverty line for income-generating activities. Loans at 6% p.a. through state channelising agencies.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your State Scheduled Caste Development Corporation or nearest State Channelising Agency.",
-    "documents_required": ["Aadhaar Card", "SC Certificate", "Income Certificate", "Project Report", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "SC Certificate",
+      "Income Certificate",
+      "Project Report",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "SC"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "SC"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://nsfdc.nic.in"
   },
   {
     "scheme_id": "NSTFDC_TRIBAL_LOAN",
     "name": "National ST Finance & Development Corporation Loans",
     "category": "Banking & Finance",
     "description": "Provides concessional loans to Scheduled Tribe individuals for education, vocational training, and income-generating activities. Education loans at 4% p.a. and other loans at 6% p.a.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your State Tribal Development / Finance Corporation.",
-    "documents_required": ["Aadhaar Card", "ST Certificate", "Income Certificate", "Project Report", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "ST Certificate",
+      "Income Certificate",
+      "Project Report",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "ST"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "ST"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://nstfdc.nic.in"
   },
   {
     "scheme_id": "PM_DAKSH",
     "name": "PM DAKSH Scheme (Skill Development for Marginalised)",
     "category": "Employment",
     "description": "Provides free short and long-term skill development training to SC, OBC, EBC, Safai Karamcharis, and De-notified Tribe persons. Includes stipend and toolkit assistance.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at pmdaksh.dosje.gov.in or visit your nearest NSFDC/NSKFDC office.",
-    "documents_required": ["Aadhaar Card", "Caste Certificate", "Income Certificate", "Educational Qualification", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Caste Certificate",
+      "Income Certificate",
+      "Educational Qualification",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "SC"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 45},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "SC"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 45
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://pmdaksh.dosje.gov.in"
   },
   {
     "scheme_id": "EWS_RESERVATION",
     "name": "EWS Reservation & Scholarship Scheme",
     "category": "Scholarship",
     "description": "Provides 10% reservation in central government jobs and central educational institutions for Economically Weaker Sections (EWS) among the General category. Also provides pre-matric and post-matric scholarships.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Obtain an EWS certificate from your Tehsildar/SDM. Use it for college admissions and government job applications under the 10% EWS quota.",
-    "documents_required": ["Aadhaar Card", "EWS Income Certificate from Tehsildar/SDM", "PAN Card", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "EWS Income Certificate from Tehsildar/SDM",
+      "PAN Card",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "EWS"},
-      {"field": "annual_income", "operator": "<=", "value": 800000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "EWS"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 800000
+      }
+    ],
+    "portal_url": "https://socialjustice.gov.in"
   },
   {
     "scheme_id": "DNT_SCHOLARSHIP",
     "name": "Dr. Ambedkar Pre-Matric & Post-Matric Scholarship (DNT)",
     "category": "Scholarship",
     "description": "Provides scholarships to students belonging to De-Notified, Nomadic, and Semi-Nomadic Tribes (DNT/NT/SNT) — communities historically treated as criminals under the Criminal Tribes Act. Covers tuition, maintenance, and hostel allowance.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through the Ministry of Social Justice and Empowerment portal or your state's DNT Welfare Board.",
-    "documents_required": ["Aadhaar Card", "DNT/NT/SNT Community Certificate", "Income Certificate", "Previous Mark Sheets", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "DNT/NT/SNT Community Certificate",
+      "Income Certificate",
+      "Previous Mark Sheets",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "DNT"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "DNT"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://socialjustice.gov.in"
   },
   {
     "scheme_id": "NT_SCHOLARSHIP",
     "name": "Scholarship for Nomadic Tribes (NT/SNT)",
     "category": "Scholarship",
     "description": "Provides financial assistance to students from Nomadic and Semi-Nomadic Tribe communities for pre-matric and post-matric education. Covers fees, books, and maintenance allowance.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your state's Social Welfare or Tribal Welfare Department. Some states have dedicated NT/SNT boards.",
-    "documents_required": ["Aadhaar Card", "NT/SNT Community Certificate", "Income Certificate", "Mark Sheets", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "NT/SNT Community Certificate",
+      "Income Certificate",
+      "Mark Sheets",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "NT"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "NT"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://socialjustice.gov.in"
   },
   {
     "scheme_id": "SNT_SCHOLARSHIP",
     "name": "Scholarship for Semi-Nomadic Tribes (SNT)",
     "category": "Scholarship",
     "description": "Financial assistance for students from Semi-Nomadic Tribe communities to pursue pre-matric and post-matric education.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your state's Social Welfare Department or nearest SNT Welfare Board office.",
-    "documents_required": ["Aadhaar Card", "SNT Community Certificate", "Income Certificate", "Mark Sheets", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "SNT Community Certificate",
+      "Income Certificate",
+      "Mark Sheets",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "SNT"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "annual_income", "operator": "<=", "value": 200000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "SNT"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 200000
+      }
+    ],
+    "portal_url": "https://socialjustice.gov.in"
   },
   {
     "scheme_id": "MINORITIES_WAQF_SCHOLARSHIP",
     "name": "Maulana Azad National Fellowship (Minorities)",
     "category": "Scholarship",
     "description": "Provides fellowships to students from minority communities (Muslim, Christian, Sikh, Buddhist, Zoroastrian, Jain) to pursue M.Phil and PhD. Fellowship of Rs. 31,000/month (JRF) and Rs. 35,000/month (SRF).",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through the University Grants Commission (UGC) portal or ugc.ac.in. Must have cleared UGC-NET or equivalent.",
-    "documents_required": ["Aadhaar Card", "Minority Community Certificate", "UGC-NET Scorecard", "University Enrollment Letter", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Minority Community Certificate",
+      "UGC-NET Scorecard",
+      "University Enrollment Letter",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "Minorities"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 21},
-      {"field": "age", "operator": "<=", "value": 35}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "Minorities"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 21
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 35
+      }
+    ],
+    "portal_url": "https://ugc.ac.in"
   },
   {
     "scheme_id": "SAFAI_KARAMCHARI_SCHOLARSHIP",
     "name": "Pre-Matric Scholarship for Children of Safai Karamcharis",
     "category": "Scholarship",
     "description": "Provides scholarship to children of Safai Karamcharis (sanitation workers/manual scavengers) to pursue education from Class 1 to 10. Covers maintenance allowance and study grant.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through scholarships.gov.in or the National Safai Karamcharis Finance Development Corporation (NSKFDC). Parent must be a registered Safai Karamchari.",
-    "documents_required": ["Aadhaar Card", "Parent's Safai Karamchari Employment Certificate", "Income Certificate", "School Bonafide Certificate", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Parent's Safai Karamchari Employment Certificate",
+      "Income Certificate",
+      "School Bonafide Certificate",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "Safai Karamcharis"},
-      {"field": "employment_status", "operator": "==", "value": "Student"},
-      {"field": "age", "operator": ">=", "value": 5},
-      {"field": "age", "operator": "<=", "value": 16}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "Safai Karamcharis"
+      },
+      {
+        "field": "employment_status",
+        "operator": "==",
+        "value": "Student"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 5
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 16
+      }
+    ],
+    "portal_url": "https://nskfdc.nic.in"
   },
   {
     "scheme_id": "NSKFDC_LOAN",
     "name": "NSKFDC Loan Scheme (Safai Karamcharis)",
     "category": "Banking & Finance",
     "description": "Provides concessional loans to Safai Karamcharis and manual scavengers for income-generating activities, education, and rehabilitation. Interest rate as low as 2% per annum for women beneficiaries.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through the National Safai Karamcharis Finance and Development Corporation (nskfdc.nic.in) or your state channelising agency.",
-    "documents_required": ["Aadhaar Card", "Safai Karamchari Certificate", "Income Certificate", "Project Report", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Safai Karamchari Certificate",
+      "Income Certificate",
+      "Project Report",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "Safai Karamcharis"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "Safai Karamcharis"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://nskfdc.nic.in"
   },
   {
     "scheme_id": "PM_DAKSH_OBC",
     "name": "PM DAKSH Scheme for OBC/EWS/Minorities",
     "category": "Employment",
     "description": "Provides free skill development training to OBC, EBC (Extremely Backward Classes), and Minorities. Includes stipend during training and toolkit assistance after completion.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply at pmdaksh.dosje.gov.in or visit your nearest NBCFDC/NMDFC office.",
-    "documents_required": ["Aadhaar Card", "Community Certificate", "Income Certificate", "Educational Qualification", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "Community Certificate",
+      "Income Certificate",
+      "Educational Qualification",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "OBC (Non-Creamy Layer)"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "age", "operator": "<=", "value": 45},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "OBC (Non-Creamy Layer)"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "age",
+        "operator": "<=",
+        "value": 45
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://pmdaksh.dosje.gov.in"
   },
   {
     "scheme_id": "NBCFDC_LOAN",
     "name": "NBCFDC Loan Scheme (OBC/DNT/Minorities)",
     "category": "Banking & Finance",
     "description": "National Backward Classes Finance and Development Corporation provides concessional term loans to OBC, DNT, and minority individuals for education and income-generating activities at 6% p.a.",
-    "applicable_states": ["All"],
+    "applicable_states": [
+      "All"
+    ],
     "guidance": "Apply through your State Channelising Agency (SCA) for NBCFDC or visit nbcfdc.gov.in.",
-    "documents_required": ["Aadhaar Card", "OBC/DNT/Minority Certificate", "Income Certificate", "Project Report", "Bank Account Details"],
+    "documents_required": [
+      "Aadhaar Card",
+      "OBC/DNT/Minority Certificate",
+      "Income Certificate",
+      "Project Report",
+      "Bank Account Details"
+    ],
     "rules": [
-      {"field": "caste_category", "operator": "==", "value": "OBC"},
-      {"field": "age", "operator": ">=", "value": 18},
-      {"field": "annual_income", "operator": "<=", "value": 300000}
-    ]
+      {
+        "field": "caste_category",
+        "operator": "==",
+        "value": "OBC"
+      },
+      {
+        "field": "age",
+        "operator": ">=",
+        "value": 18
+      },
+      {
+        "field": "annual_income",
+        "operator": "<=",
+        "value": 300000
+      }
+    ],
+    "portal_url": "https://nbcfdc.gov.in"
   }
 ]

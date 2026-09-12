@@ -417,6 +417,11 @@ if "results" in st.session_state:
                         f'<div style="background:#e8f4fd;border-left:4px solid #3b82d4;padding:10px 14px;border-radius:4px;font-size:14px;">{_linkify(matching.guidance)}</div>',
                         unsafe_allow_html=True,
                     )
+                    if matching.portal_url:
+                        st.markdown(
+                            f'<a href="{matching.portal_url}" target="_blank" style="display:inline-block;margin-top:8px;padding:8px 20px;background:#1d6f42;color:white;border-radius:6px;text-decoration:none;font-weight:bold;font-size:14px;">🌐 Apply Now on Official Portal</a>',
+                            unsafe_allow_html=True,
+                        )
                     st.markdown(f"**{L.get('section_documents', 'Documents Required')}**")
                     for doc in matching.documents_required:
                         st.write(f"• {doc}")

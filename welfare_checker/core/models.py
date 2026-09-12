@@ -69,6 +69,7 @@ class Scheme:
     applicable_states: list[str]
     guidance: str
     documents_required: list[str]
+    portal_url: str = ""
     rules: list[EligibilityRule] = field(default_factory=list)
 
 

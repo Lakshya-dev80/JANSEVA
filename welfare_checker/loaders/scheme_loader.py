@@ -86,6 +86,7 @@ def _parse_scheme(entry: dict, index: int) -> Scheme:
         applicable_states=entry["applicable_states"],
         guidance=entry["guidance"],
         documents_required=entry["documents_required"],
+        portal_url=entry.get("portal_url", ""),
         rules=rules,
     )
 
