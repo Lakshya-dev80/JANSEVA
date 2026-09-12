@@ -1,0 +1,131 @@
+[
+  {
+    "scheme_id": "PM_AWAS",
+    "name": "PM Awas Yojana",
+    "description": "Pradhan Mantri Awas Yojana (PMAY) provides financial assistance to eligible families for constructing or purchasing an affordable house. The scheme targets economically weaker sections and low-income groups who do not own a pucca house.",
+    "applicable_states": ["All"],
+    "guidance": "Apply online at the official PMAY portal (pmaymis.gov.in) or visit your nearest Common Service Centre (CSC). You can also apply through your local municipality office or gram panchayat.",
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Caste Certificate (if applicable)",
+      "Bank Passbook / Account Details",
+      "Photograph"
+    ],
+    "rules": [
+      {"field": "age", "operator": ">=", "value": 18},
+      {"field": "annual_income", "operator": "<=", "value": 300000}
+    ]
+  },
+  {
+    "scheme_id": "MGNREGA",
+    "name": "MGNREGA (Mahatma Gandhi NREGS)",
+    "description": "The Mahatma Gandhi National Rural Employment Guarantee Act (MGNREGA) guarantees 100 days of wage employment per year to rural households whose adult members are willing to do unskilled manual work. It strengthens livelihood security for rural families.",
+    "applicable_states": ["All"],
+    "guidance": "Visit your local Gram Panchayat office to register. After registration, you will receive a Job Card which entitles you to apply for work within 15 days. Work will be provided within 5 km of your residence.",
+    "documents_required": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Bank Account Details",
+      "Photograph",
+      "Residence Proof"
+    ],
+    "rules": [
+      {"field": "employment_status", "operator": "==", "value": "Unemployed"},
+      {"field": "annual_income", "operator": "<=", "value": 150000}
+    ]
+  },
+  {
+    "scheme_id": "NSP",
+    "name": "National Scholarship Portal (NSP)",
+    "description": "The National Scholarship Portal provides various central government scholarships to students from economically weaker sections. It covers pre-matric, post-matric, and merit-cum-means scholarships for students across different educational levels.",
+    "applicable_states": ["All"],
+    "guidance": "Apply online at scholarships.gov.in. Register using your Aadhaar number and fill in your academic and bank details. Applications are usually open from July to October each year.",
+    "documents_required": [
+      "Aadhaar Card",
+      "Income Certificate",
+      "Mark Sheets / Academic Records",
+      "Bank Account Details",
+      "Caste Certificate (if applicable)",
+      "Institution Verification Letter"
+    ],
+    "rules": [
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "age", "operator": "<=", "value": 30},
+      {"field": "annual_income", "operator": "<=", "value": 250000}
+    ]
+  },
+  {
+    "scheme_id": "PM_KISAN",
+    "name": "PM-KISAN (Pradhan Mantri Kisan Samman Nidhi)",
+    "description": "PM-KISAN provides income support of Rs. 6,000 per year (in three equal instalments) directly to the bank accounts of small and marginal farmer families. It supplements their financial needs for agricultural inputs and household requirements.",
+    "applicable_states": ["All"],
+    "guidance": "Register at the official PM-KISAN portal (pmkisan.gov.in) or visit your nearest Common Service Centre. You can also approach your local Agriculture Department office or Bank for assistance.",
+    "documents_required": [
+      "Aadhaar Card",
+      "Land Ownership Records (Khasra/Khatauni)",
+      "Bank Account Details",
+      "Mobile Number Linked to Aadhaar"
+    ],
+    "rules": [
+      {"field": "employment_status", "operator": "==", "value": "Self-Employed"},
+      {"field": "annual_income", "operator": "<=", "value": 200000},
+      {"field": "age", "operator": ">=", "value": 18}
+    ]
+  },
+  {
+    "scheme_id": "SSY",
+    "name": "Sukanya Samriddhi Yojana",
+    "description": "Sukanya Samriddhi Yojana is a small savings scheme for the girl child, encouraging parents to save for their daughter's future education and marriage expenses. It offers an attractive interest rate and tax benefits under Section 80C.",
+    "applicable_states": ["All"],
+    "guidance": "Open an SSY account at your nearest post office or authorised bank branch. The account can be opened in the name of a girl child below 10 years of age. A minimum deposit of Rs. 250 per year is required.",
+    "documents_required": [
+      "Girl Child's Birth Certificate",
+      "Guardian's Aadhaar Card",
+      "Guardian's PAN Card",
+      "Address Proof",
+      "Photograph of Guardian"
+    ],
+    "rules": [
+      {"field": "gender", "operator": "==", "value": "Female"},
+      {"field": "age", "operator": "<=", "value": 10}
+    ]
+  },
+  {
+    "scheme_id": "AB_PMJAY",
+    "name": "Ayushman Bharat PM-JAY",
+    "description": "Ayushman Bharat Pradhan Mantri Jan Arogya Yojana (PM-JAY) is the world's largest government-funded health insurance scheme. It provides health coverage of up to Rs. 5 lakh per family per year for secondary and tertiary hospitalisation.",
+    "applicable_states": ["All"],
+    "guidance": "Check your eligibility at pmjay.gov.in or call the helpline 14555. If eligible, you will receive an Ayushman Card. You can use this card at any empanelled government or private hospital for cashless treatment.",
+    "documents_required": [
+      "Aadhaar Card",
+      "Ration Card",
+      "Income Certificate",
+      "Residence Proof"
+    ],
+    "rules": [
+      {"field": "annual_income", "operator": "<=", "value": 100000}
+    ]
+  },
+  {
+    "scheme_id": "SC_ST_SCHOLARSHIP",
+    "name": "Post-Matric Scholarship for SC/ST Students",
+    "description": "The Post-Matric Scholarship scheme provides financial assistance to Scheduled Caste and Scheduled Tribe students studying at the post-matriculation level. It covers tuition fees, maintenance allowance, and study tour charges.",
+    "applicable_states": ["All"],
+    "guidance": "Apply through the National Scholarship Portal (scholarships.gov.in) or through your state's Social Welfare Department. Fresh applications are accepted at the start of each academic year.",
+    "documents_required": [
+      "Aadhaar Card",
+      "Caste Certificate (SC/ST)",
+      "Income Certificate",
+      "Mark Sheets",
+      "Bank Account Details",
+      "Institution Bonafide Certificate"
+    ],
+    "rules": [
+      {"field": "caste_category", "operator": "!=", "value": "General"},
+      {"field": "caste_category", "operator": "!=", "value": "OBC"},
+      {"field": "employment_status", "operator": "==", "value": "Student"},
+      {"field": "annual_income", "operator": "<=", "value": 250000}
+    ]
+  }
+]
