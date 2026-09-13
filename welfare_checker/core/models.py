@@ -70,6 +70,8 @@ class Scheme:
     guidance: str
     documents_required: list[str]
     portal_url: str = ""
+    benefit_amount: str = ""
+    benefit_type: str = ""
     rules: list[EligibilityRule] = field(default_factory=list)
 
 

@@ -415,16 +415,43 @@ if "results" in st.session_state:
 
     # --- Eligible schemes ---
     if filtered_eligible:
+        # Total estimated benefit summary
+        total_benefits = [s.benefit_amount for s in schemes
+                         if any(r.scheme_name == s.name for r in filtered_eligible) and s.benefit_amount]
         st.success(
             f"✅ **{L.get('results_eligible_header', 'Eligible Schemes')}** "
             f"({len(filtered_eligible)} scheme(s) found)"
         )
+
+        # Scam warning banner — global
+        st.markdown(
+            '<div style="background:#fff3cd;border-left:5px solid #ff9800;padding:12px 16px;border-radius:6px;margin-bottom:12px;">'
+            '<b>⚠️ IMPORTANT — Beware of Scams!</b><br>'
+            'All these government schemes are <b>100% FREE</b> to apply. '
+            '<b>Never pay anyone</b> — no agent, middleman, or website — to apply on your behalf. '
+            'Always apply directly through the official government portal.'
+            '</div>',
+            unsafe_allow_html=True,
+        )
+
         for result in filtered_eligible:
             matching = next((s for s in schemes if s.name == result.scheme_name), None)
             category_tag = f" • 🗂️ {matching.category}" if matching else ""
+            benefit_tag = f" • 💰 {matching.benefit_amount}" if matching and matching.benefit_amount else ""
             with st.expander(f"✅ {result.scheme_name}{category_tag}", expanded=True):
                 if matching:
                     st.caption(matching.description)
+
+                # Financial benefit highlight
+                if matching and matching.benefit_amount:
+                    st.markdown(
+                        f'<div style="background:#e8f8e8;border-left:5px solid #1d6f42;padding:10px 16px;border-radius:6px;margin-bottom:8px;">'
+                        f'<span style="font-size:13px;color:#555;">💰 <b>Estimated Benefit ({matching.benefit_type})</b></span><br>'
+                        f'<span style="font-size:18px;font-weight:bold;color:#1d6f42;">{matching.benefit_amount}</span>'
+                        f'</div>',
+                        unsafe_allow_html=True,
+                    )
+
                 st.markdown(f"**{L.get('section_reasons', 'Eligibility Reasons')}**")
                 for reason in result.reasons:
                     st.write(reason)
